@@ -1,7 +1,3 @@
-"""This code demonstrates a possible implementation of the Memento pattern in Python
-Let's say we want to have a story of some actions and we also want to be able to undo our actions"""
-
-
 class Memento:
     def __init__(self, content):
         self.content = content
