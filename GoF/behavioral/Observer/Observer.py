@@ -54,7 +54,7 @@ class Payroll(Observer):
 
 class TaxMan(Observer):
 
-    def update(self, employee):
+    def update(self, employee, salary):
         print(f'TaxMan: Send {employee.name} a new tax bill!\n')
 
 
