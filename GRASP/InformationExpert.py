@@ -4,10 +4,12 @@ CardOwner doesn't calculate total for every card.
 Each card does it itself, because It keeps all the info about transactions.
 The Owner calculates total on All the cards that He owns."""
 
+from typing import List
+
 
 class CardOwner:
     def __init__(self):
-        self.__cards: list[CreditCard] = list()
+        self.__cards: List[CreditCard] = list()
         ...
     ...
 

@@ -1,7 +1,7 @@
 """Schematic implementation of the Creator pattern
 
 Back to the previous example
-An instance of the class (a card) is created by the class (an owner) which makes use of it"""
+An instance of a class (a card) is created by the class (an owner) which makes use of it"""
 
 
 class Human:

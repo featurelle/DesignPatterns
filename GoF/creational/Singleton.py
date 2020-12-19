@@ -1,23 +1,29 @@
 from GoF.behavioral.Observer.Observer import Observer, Observable
 
 
-class Log(Observer):
+class Singleton:
 
     __instance = None
 
-    def __init__(self):
-        self.__changes = []
-
     def __new__(cls, *args, **kwargs):
         if cls.__instance:
-            return cls.__instance
-
+            pass
         else:
             cls.__instance = object.__new__(cls)
-            return cls.__instance
+        return cls.__instance
 
     def __str__(self):
         return 'I am the only one!'
+
+    @property
+    def instance(self):
+        return self.__instance
+
+
+class Log(Observer, Singleton):
+
+    def __init__(self):
+        self.__changes = []
 
     def show_log(self):
         ending_line = '\n' + '.' * 10 + '\n\n'
@@ -55,6 +61,9 @@ def demo():
     o2.change_state('And me too')
     log1.show_log()
     log2.show_log()
+
+    print(log1 == log2)
+    print(log1)
 
 
 if __name__ == "__main__":
