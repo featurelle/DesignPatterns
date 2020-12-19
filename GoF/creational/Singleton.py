@@ -56,7 +56,7 @@ def demo():
     print(log1 == log2)
 
     log1.show_log()
-    o1.change_state('Now I am old')
+    o1.change_state('Now I have changed')
     log2.show_log()
     o2.change_state('And me too')
     log1.show_log()
