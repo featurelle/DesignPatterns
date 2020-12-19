@@ -1,48 +1,98 @@
+from abc import ABC, abstractmethod
 import random
+from colorama import init, Fore
 
 
-class CourseFactory:
-    def __init__(self, courses_factory=None):
-        self.course_factory = courses_factory
+class GUIFactory(ABC):
 
-    def show_course(self):
-        course = self.course_factory()
+    def create_gui_env(self):
+        button = self.create_button()
+        window = self.create_window()
+        return button, window
 
-        print(f'We have a course named {course}')
-        print(f'its price is {course.fee()}')
+    @abstractmethod
+    def create_button(self):
+        pass
+
+    @abstractmethod
+    def create_window(self):
+        pass
 
 
-class Course1:
-    def fee(self):
-        return 11000
+class WindowsGUIFactory(GUIFactory):
+
+    def create_window(self):
+        return WindowsWindow()  # когда писал код, перепутал местами эти методы
+        # найти ошибку заняло где-то полсекунды,
+        # ведь по структуре она могла быть только здесь
+
+    def create_button(self):
+        return WindowsButton()
+
+
+class LinuxGUIFactory(GUIFactory):
+
+    def create_button(self):
+        return LinuxButton()
+
+    def create_window(self):
+        return LinuxWindow()
+
+
+class Button(ABC):
+
+    @abstractmethod
+    def __str__(self):
+        pass
+
+
+class Window(ABC):
+
+    @abstractmethod
+    def __str__(self):
+        pass
+
+
+class WindowsButton(Button):
 
     def __str__(self):
-        return "DSA"
+        return Fore.BLUE + "WinButton" + Fore.RESET
 
 
-class Course2:
-    def fee(self):
-        return 8000
+class WindowsWindow(Window):
 
     def __str__(self):
-        return "STL"
+        return Fore.CYAN + "WinWindow" + Fore.RESET
 
 
-class Course3:
-    def fee(self):
-        return 15000
+class LinuxButton(Button):
 
     def __str__(self):
-        return 'SDE'
+        return Fore.RED + "LinButton" + Fore.RESET
 
 
-def random_course():
-    return random.choice([Course3, Course2, Course1])()
+class LinuxWindow(Window):
+
+    def __str__(self):
+        return Fore.RED + "LinWindow" + Fore.RESET
 
 
-if __name__ == "__main__":
+class SomeUserApp:
 
-    course = CourseFactory(random_course)
+    def __init__(self):
+        self.os = random.choice([WindowsGUIFactory, LinuxGUIFactory])()
 
-    for _ in range(5):
-        course.show_course()
+    def start(self):
+        button, window = self.os.create_gui_env()
+        init(autoreset=True)
+        print(f"This button: {button} placed in that window: {window}")
+
+
+def main():
+    for _ in range(3):
+        app = SomeUserApp()
+        app.start()
+
+
+if __name__ == '__main__':
+    main()
