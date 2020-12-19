@@ -12,7 +12,7 @@ class CourseFactory:
         print(f'its price is {course.fee()}')
 
 
-class DSA:
+class Course1:
     def fee(self):
         return 11000
 
@@ -20,7 +20,7 @@ class DSA:
         return "DSA"
 
 
-class STL:
+class Course2:
     def fee(self):
         return 8000
 
@@ -28,7 +28,7 @@ class STL:
         return "STL"
 
 
-class SDE:
+class Course3:
     def fee(self):
         return 15000
 
@@ -37,7 +37,7 @@ class SDE:
 
 
 def random_course():
-    return random.choice([SDE, STL, DSA])()
+    return random.choice([Course3, Course2, Course1])()
 
 
 if __name__ == "__main__":

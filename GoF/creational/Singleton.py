@@ -15,10 +15,6 @@ class Singleton:
     def __str__(self):
         return 'I am the only one!'
 
-    @property
-    def instance(self):
-        return self.__instance
-
 
 class Log(Observer, Singleton):
 
