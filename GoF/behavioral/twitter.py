@@ -1,4 +1,4 @@
-from GoF.behavioral.Observer.Observer import Observer, Observable
+from GoF.behavioral.Observer import Observer, Observable
 
 
 class Twitter(Observable, Observer):
