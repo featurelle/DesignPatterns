@@ -170,6 +170,7 @@ class ComputerGUI:
 
 
 def client():
+    init()
     ph_b = AppFrameBuilderPhone()
     pc_b = AppFrameBuilderPC()
     d = Director(ph_b)
