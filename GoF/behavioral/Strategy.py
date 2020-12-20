@@ -27,7 +27,7 @@ class CarRouter(Router):
         super().__init__('Car', 'Driving by')
 
     def find_route(self, a, b):
-        return (a + b, ) * 2
+        return a + b, (a + b) // 30
 
 
 class BikeRouter(Router):
@@ -36,7 +36,7 @@ class BikeRouter(Router):
         super().__init__('Bike', 'Riding on')
 
     def find_route(self, a, b):
-        return a + b, (a + b) * 3
+        return (a + b, ) * 2
 
 
 class BusRouter(Router):
@@ -45,7 +45,7 @@ class BusRouter(Router):
         super().__init__('Bus', 'Going by')
 
     def find_route(self, a, b):
-        return a + b, (a + b) * 2
+        return a + b, (a + b) // 20
 
 
 class Navigator:
