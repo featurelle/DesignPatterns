@@ -13,26 +13,29 @@ class Invoker:
         return self._command
 
     @command.setter
-    def command(self):
-        return self._command
+    def command(self, command):
+        self._command = command
 
     def invoke(self):
         self.command.execute()
 
 
 # TODO: Написать элементам интерфейса разных инвокеров onclick, onkeydown и тп для реализма. И пусть наследуют.
+# Инвокеры как кнопки на пульте, а данный класс Button скорее пульт в целом, содержащий список своих кнопок (слушатели?)
 # Конкретные инвокеры могут быть разные и вести себя во время исполнения команды могут по-разному.
 # Если сравнивать с пультом, то кнопки имеют разную форму, могут быть сенсорными или обычными, светиться или пищать.
 class Button(Invoker):
 
     def invoke(self):
-        return 'Button was pressed\n' + str(super().invoke())
+        print('Button was pressed')
+        super().invoke()
 
 
 class Picture(Invoker):
 
     def invoke(self):
-        return 'A picture darkened\n' + str(super().invoke())
+        print('A picture darkened')
+        super().invoke()
 
 
 # Интерфейс команды задает только метод, с которым умеют работать инвоукеры и необходимость иметь какой-то ресивер.
@@ -51,7 +54,7 @@ class OnClick(ABC):
 class GetTextFromBuffer(OnClick):
 
     def execute(self):
-        return self.receiver.text
+        self.receiver.show_text()
 
 
 class SayGoodbyeToBuffer(OnClick):
@@ -71,25 +74,29 @@ class OpenMyLink(OnClick):
 
 
 # Один ресивер - это буфер
+# Важно, что результат возвращает именно ресивер, в данном случае - печатает в консоль
 class TextBuffer:
 
     def __init__(self):
-        self.__text = "Hello World"
+        self._text = "Hello World"
 
     @property
     def text(self):
-        return self.__text
+        return self._text
 
     @text.setter
     def text(self, text):
-        self.__text = text
+        self._text = text
+
+    def show_text(self):
+        print(self.text)
 
 
 # Другой может быть вообще чем угодно, например браузером (открывателем линков)
 class LinkOpener:
 
     def open_link(self, link):
-        return 'Opening https://' + link
+        print('Opening https://' + link)
 
 
 # Остается только насоздавать кнопок и картинок, команд и присвоить кнопкам и картинкам команды
@@ -107,10 +114,10 @@ if __name__ == "__main__":
     link_command = OpenMyLink(link_opener, 'google.com')
     picture = Picture(link_command)
 
-    print(button1.invoke())
-    print(button2.invoke())
-    print(picture.invoke())
+    button1.invoke()
+    button2.invoke()
+    picture.invoke()
 
     picture.command = get_text
 
-    print(picture.invoke())
+    picture.invoke()
