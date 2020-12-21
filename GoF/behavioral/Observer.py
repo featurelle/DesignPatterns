@@ -11,16 +11,16 @@ class Observer(ABC):
 class Observable:
 
     def __init__(self):
-        self.__observers = []
+        self._observers = []
 
     def add_observer(self, observer):
-        self.__observers.append(observer)
+        self._observers.append(observer)
 
     def delete_observer(self, observer):
-        self.__observers.remove(observer)
+        self._observers.remove(observer)
 
     def notify_observers(self, *args):
-        for observer in self.__observers:
+        for observer in self._observers:
             observer.update(self, *args)
 
 

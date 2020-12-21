@@ -1,6 +1,8 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
 
+# Вообще говоря, пайтон содержит декораторы по дефолту. Вот эти @abstractmethod и тд - самые что ни на есть декораторы!
+
 
 # Абстрактный класс Tag - общий для всех
 class Tag(ABC):

@@ -1,4 +1,30 @@
 from GoF.behavioral.Observer import Observer, Observable
+import functools
+
+
+# В принципе синглтон можно создать и с помощью декоратора
+def singleton(cls):
+    @functools.wraps(cls)
+    def wrapper_singleton(*args, **kwargs):
+        if not wrapper_singleton.instance:
+            wrapper_singleton.instance = cls(*args, **kwargs)
+        return wrapper_singleton.instance
+    wrapper_singleton.instance = None
+    return wrapper_singleton
+
+
+@singleton
+class LogDecorated(Observer):
+
+    def __init__(self):
+        self.__changes = []
+
+    def show_log(self):
+        ending_line = '\n' + '.' * 10 + '\n\n'
+        print(*self.__changes, sep='\n', end=ending_line)
+
+    def update(self, source, change):
+        self.__changes.append(f'At {source.name}: {change}.')
 
 
 class Singleton:
@@ -34,10 +60,15 @@ class SomeClass(Observable):
         super().__init__()
         self.name = name
         self.state = 'New object'
+        self.add_observer(Log())    # Можно также обеспечить обязательное создание лога без вызова метода извне
 
     def change_state(self, new_state):
         self.state = new_state
         self.notify_observers(self.state)
+
+    @property
+    def log(self):
+        return self._observers[0]
 
 
 def demo():
@@ -50,6 +81,8 @@ def demo():
     o2.add_observer(log2)
 
     print(log1 == log2)
+    print(o1.log == o2.log)
+    print(log1 == o2.log)
 
     log1.show_log()
     o1.change_state('Now I have changed')
@@ -60,6 +93,12 @@ def demo():
 
     print(log1 == log2)
     print(log1)
+
+    print('Now with decorator')
+    log3, log4 = LogDecorated(), LogDecorated()
+    print(log3 == log4)
+    print(str(log3))    # Но классы удобнее использовать, ведь во-первых они понятнее, во-вторых их функционал богаче.
+    # Я бы много времени потратил, пытаясь обернуть еще и метод __str__ с помощью декоратора. А зачем, если есть классы?
 
 
 if __name__ == "__main__":
