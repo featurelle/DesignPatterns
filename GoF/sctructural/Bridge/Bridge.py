@@ -139,8 +139,8 @@ def demo():
     check4 = CheckType2(300, None, None)
 
     reports = [
-               ReportToFile(col1, '../rep1.txt'),
-               ReportToFile(check1, '../check.txt'),
+               ReportToFile(col1, 'rep1.txt'),
+               ReportToFile(check1, 'check.txt'),
                ReportToString(col2),
                ReportToString(check3),
                ReportToBuffer(check2),
