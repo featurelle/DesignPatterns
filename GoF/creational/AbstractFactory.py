@@ -22,9 +22,7 @@ class GUIFactory(ABC):
 class WindowsGUIFactory(GUIFactory):
 
     def create_window(self):
-        return WindowsWindow()  # когда писал код, перепутал местами эти методы
-        # найти ошибку заняло где-то полсекунды,
-        # ведь по структуре она могла быть только здесь
+        return WindowsWindow()
 
     def create_button(self):
         return WindowsButton()

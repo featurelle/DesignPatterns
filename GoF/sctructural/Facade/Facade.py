@@ -42,8 +42,8 @@ class PostRequester:
         try:
             r = requests.post(self.service, headers=self.auth_data, json=self.body)
             self.status = str(r.status_code) + r.reason
-        except Exception:
-            self.status = 'Something went wrong...'
+        except requests.exceptions.ConnectionError:
+            self.status = 'Oops... Connection declined'
 
 
 class StandardPoster:

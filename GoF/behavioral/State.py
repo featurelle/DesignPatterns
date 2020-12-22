@@ -1,56 +1,55 @@
-class State:
-    def scan(self):
-        self.pos += 1
+# Смысл: делигровать работу, зависящую от состояния, отдельным классам Состояний
+# Переключение из состояния теряет смысл в данном примере, если состояний больше двух
+# TODO: Отличие от Стратегии? То, что состояние знает о своем контексте? А практическяа польза?
 
-        """check for the last station"""
-        if self.pos == len(self.stations):
-            self.pos = 0
-        print("Visiting... Station is {} {}".format(self.stations[self.pos], self.name))
+from abc import ABC, abstractmethod
 
 
-class AmState(State):
-    def __init__(self, radio):
-        self.radio = radio
-        self.stations = ["1250", "1380", "1510"]
-        self.pos = 0
-        self.name = "AM"
+class State(ABC):
 
-    def toggle_amfm(self):
-        print("Switching to FM")
-        self.radio.state = self.radio.fmstate
+    def __init__(self, machine):
+        self.machine = machine
+
+    @abstractmethod
+    def type(self, *args):
+        pass
 
 
-class FmState(State):
-    def __init__(self, radio):
-        self.radio = radio
-        self.stations = ["81.3", "89.1", "103.9"]
-        self.pos = 0
-        self.name = "FM"
+class AllUpper(State):
 
-    def toggle_amfm(self):
-        print("Switching to AM")
-        self.radio.state = self.radio.amstate
+    def type(self, string: str):
+        print(string.upper())
+
+    def switch_style(self):
+        self.machine.style = self.machine.low
 
 
-class Radio:
+class AllLower(State):
+
+    def type(self, string: str):
+        print(string.lower())
+
+    def switch_style(self):
+        self.machine.style = self.machine.up
+
+
+class TextType:
+
     def __init__(self):
-        """We have an AM state and an FM state"""
-        self.fmstate = FmState(self)
-        self.amstate = AmState(self)
-        self.state = self.fmstate
+        self.up = AllUpper(self)
+        self.low = AllLower(self)
+        self.style = self.low
 
-    def toggle_amfm(self):
-        self.state.toggle_amfm()
+    def switch(self):
+        self.style.switch_style()
 
-    def scan(self):
-        self.state.scan()
+    def type(self, string: str):
+        self.style.type(string)
 
 
 if __name__ == "__main__":
 
-    radio = Radio()
-    actions = [radio.scan] * 3 + [radio.toggle_amfm] + [radio.scan] * 3
-    actions *= 2
-
-    for action in actions:
-        action()
+    machine = TextType()
+    machine.type('Hello')
+    machine.switch()
+    machine.type('Hello')

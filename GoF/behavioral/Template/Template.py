@@ -11,10 +11,10 @@ class AverageCalculator(ABC):
                 total_sum += self.next_item()
                 num_items += 1
 
-            return total_sum / num_items
+            return round(total_sum / num_items, 3)
 
         except ZeroDivisionError:
-            raise RuntimeError("Can not calculate the average of an empty sequence.txt")
+            raise RuntimeError("Can not calculate the average of an empty sequence")
 
         finally:
             self.dispose()
