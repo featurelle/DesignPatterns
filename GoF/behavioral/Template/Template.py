@@ -1,9 +1,9 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 from GoF.behavioral.Iterator import Iterator
 
 
-class AverageCalculator(ABC, Iterator):
+class AverageCalculator(Iterator):
 
     @abstractmethod
     def has_next(self):

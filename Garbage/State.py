@@ -23,7 +23,7 @@ class AmState(State):
 
     def toggle_amfm(self):
         print("Switching to FM")
-        self.radio.state = self.radio.fmstate
+        self.radio.type = self.radio.fmstate
 
 
 class FmState(State):
@@ -36,7 +36,7 @@ class FmState(State):
     def toggle_amfm(self):
 
         print("Switching to AM")
-        self.radio.state = self.radio.amstate
+        self.radio.type = self.radio.amstate
 
 
 class Radio:
