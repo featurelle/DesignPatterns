@@ -1,7 +1,17 @@
 from abc import ABC, abstractmethod
 
+from GoF.behavioral.Iterator import Iterator
 
-class AverageCalculator(ABC):
+
+class AverageCalculator(ABC, Iterator):
+
+    @abstractmethod
+    def has_next(self):
+        pass
+
+    @abstractmethod
+    def next_item(self):
+        pass
 
     def average(self):
         try:
@@ -18,14 +28,6 @@ class AverageCalculator(ABC):
 
         finally:
             self.dispose()
-
-    @abstractmethod
-    def has_next(self):
-        pass
-
-    @abstractmethod
-    def next_item(self):
-        pass
 
     def dispose(self):
         pass
