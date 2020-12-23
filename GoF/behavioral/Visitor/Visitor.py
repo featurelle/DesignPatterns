@@ -5,22 +5,37 @@
 
 from __future__ import annotations
 from abc import ABC, abstractmethod
+from itertools import permutations
 
 from colorama import Fore, init
 
 
 class Visitor(ABC):
 
-    @abstractmethod
     def __init__(self, name, g_cb, s_cb, r_cb) -> None:
-        pass
+        self._name = name
+        self._g_cb = g_cb
+        self._s_cb = s_cb
+        self._r_cb = r_cb
 
     # Тут еще должны быть сеттеры для назначения новых кэшбеков и тп
     @property
     def name(self):
         return self._name
 
-    # Эти методы лучше бы были абстрактными, а поведение наследников - разное, но тут проще было так сделать
+    @property
+    def g_cb(self):
+        return self._g_cb
+
+    @property
+    def s_cb(self):
+        return self._s_cb
+
+    @property
+    def r_cb(self):
+        return self._r_cb
+
+    # Эти методы лучше бы были абстрактными, а поведение наследников - разное, но... Разное поведение еще написать надо)
     def cashback_golden(self, card: GoldenCard) -> None:
         print(f'{card.name} card gives you %{self.g_cb} cashback in a {self.name}')
 
@@ -33,15 +48,26 @@ class Visitor(ABC):
 
 class SmallStore(Visitor):
 
+    def __init__(self):
+        super().__init__('Small store', 3, 2, 1)
+
 
 class LargeStore(Visitor):
 
+    def __init__(self):
+        super().__init__('Large store', 4, 3, 2)
+
+
+class Mall(Visitor):
+
+    def __init__(self):
+        super().__init__('Big mall', 5, 4, 3)
 
 
 class Card(ABC):
 
-    @abstractmethod
     @property
+    @abstractmethod
     def name(self):
         pass
 
@@ -54,7 +80,7 @@ class GoldenCard(Card):
 
     @property
     def name(self):
-        return Fore.YELLOW + 'golden'
+        return Fore.YELLOW + 'Golden'
 
     def accept(self, v: Visitor) -> None:
         # Смысл давать визитору свой тип здесь умозрительный, потому что метод и так определен строго для этого типа.
@@ -67,7 +93,7 @@ class SilverCard(Card):
 
     @property
     def name(self):
-        return Fore.WHITE + 'silver'
+        return Fore.WHITE + 'Silver'
 
     def accept(self, v: Visitor) -> None:
         v.cashback_silver(self)
@@ -77,7 +103,27 @@ class RegularCard(Card):
 
     @property
     def name(self):
-        return Fore.GREEN + 'regular'
+        return Fore.GREEN + 'Regular'
 
     def accept(self, v: Visitor) -> None:
         v.cashback_regular(self)
+
+
+def demo():
+    init(autoreset=True)
+
+    market = [SmallStore(),
+              LargeStore(),
+              Mall()]
+
+    cards = [GoldenCard(),
+             SilverCard(),
+             RegularCard()]
+
+    for store in market:
+        for card in cards:
+            card.accept(store)
+
+
+if __name__ == "__main__":
+    demo()
