@@ -3,6 +3,8 @@ import functools
 
 
 # В принципе синглтон можно создать и с помощью декоратора
+# Но достаточно только посмотреть на это извращение, чтобы понять, что лучше самому.
+# А если сюда захочется что-то добавить?
 def singleton(cls):
     @functools.wraps(cls)
     def wrapper_singleton(*args, **kwargs):
@@ -56,6 +58,7 @@ class Log(Observer, Singleton):
 
 
 class SomeClass(Observable):
+
     def __init__(self, name):
         super().__init__()
         self.name = name
@@ -101,5 +104,12 @@ def demo():
     # Я бы много времени потратил, пытаясь обернуть еще и метод __str__ с помощью декоратора. А зачем, если есть классы?
 
 
+def demo2():
+
+    sing1 = Singleton()
+    sing2 = Singleton()
+    print(sing1 == sing2)
+
+
 if __name__ == "__main__":
-    demo()
+    demo2()

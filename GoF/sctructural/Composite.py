@@ -26,7 +26,7 @@ class Project(TodoList):
     def make_html(self):
         html = f'<h1>{self.name}</h1>\n<ul>\n'
         for stage in self.stages:
-            html += f'\t<li>{stage.make_html()}</li>\n'
+            html += f'<li>{stage.make_html()}</li>\n'
         return html + '</ul>\n'
 
 

@@ -1,7 +1,5 @@
 # К сожалению, в Пайтоне перегруженные методы реализуются как-то совсем дико и неудобно.
 # И трудно заставить классы-наследники наследовать все Перегруженные методы.
-# Поэтому смысл Посетителя в Пайтоне немного теряется/видоизменяется.
-# Как, впрочем, теряется и смысл других паттернов, вроде Итератора, которого легко заменяют генераторы и функция iter()
 
 from __future__ import annotations
 from abc import ABC, abstractmethod
@@ -9,7 +7,7 @@ from abc import ABC, abstractmethod
 from colorama import Fore, init
 
 
-class Visitor(ABC):
+class Visitor:
 
     def __init__(self, name, g_cb, s_cb, r_cb) -> None:
         self._name = name
