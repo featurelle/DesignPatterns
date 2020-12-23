@@ -2,6 +2,7 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 import re
 
+
 # А чем же это от декоратора отличается?
 # Получился прям в точности декоратор
 
@@ -25,7 +26,6 @@ class PasswordValidation(ABC):
     def __init__(self, then: PasswordValidation = None):
         self.__then = then
 
-
     @abstractmethod
     def check(self, password: NewPassword) -> None:
         pass
@@ -34,7 +34,7 @@ class PasswordValidation(ABC):
         if self.__then:
             self.__then.check(password)
         else:
-            return    # В рекурсии это бы называлось Base Case или терминальная ветка
+            return  # В рекурсии это бы называлось Base Case или терминальная ветка
 
 
 class PasswordLengthValidation(PasswordValidation):
@@ -79,13 +79,15 @@ def demo():
     validation3 = PasswordDigitsValidation(validation2)
     validation4 = PasswordSpecSymbolsValidation(validation3)
 
-    new_password1 = NewPassword(r'AlfBdfjkhuiwe3123[]\'.)')
-    new_password2 = NewPassword('Password...')
-    new_password3 = NewPassword('password123')
+    passwords = [NewPassword(r'AlfBdfjkhuiwe3123[]\'.)'),
+                 NewPassword('Password...'),
+                 NewPassword('password123')]
 
-    validation4.check(new_password1)
-    validation4.check(new_password2)
-    validation4.check(new_password3)
+    for password in passwords:
+        try:
+            validation4.check(password)
+        except BadPassword as e:
+            print(e)
 
 
 if __name__ == "__main__":
