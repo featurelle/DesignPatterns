@@ -5,7 +5,6 @@
 
 from __future__ import annotations
 from abc import ABC, abstractmethod
-from itertools import permutations
 
 from colorama import Fore, init
 
@@ -80,7 +79,7 @@ class GoldenCard(Card):
 
     @property
     def name(self):
-        return Fore.YELLOW + 'Golden'
+        return Fore.YELLOW + 'Golden' + Fore.RESET
 
     def accept(self, v: Visitor) -> None:
         # Смысл давать визитору свой тип здесь умозрительный, потому что метод и так определен строго для этого типа.
@@ -93,7 +92,7 @@ class SilverCard(Card):
 
     @property
     def name(self):
-        return Fore.WHITE + 'Silver'
+        return Fore.WHITE + 'Silver' + Fore.RESET
 
     def accept(self, v: Visitor) -> None:
         v.cashback_silver(self)
@@ -103,14 +102,14 @@ class RegularCard(Card):
 
     @property
     def name(self):
-        return Fore.GREEN + 'Regular'
+        return Fore.CYAN + 'Regular' + Fore.RESET
 
     def accept(self, v: Visitor) -> None:
         v.cashback_regular(self)
 
 
 def demo():
-    init(autoreset=True)
+    init()
 
     market = [SmallStore(),
               LargeStore(),
@@ -123,6 +122,7 @@ def demo():
     for store in market:
         for card in cards:
             card.accept(store)
+        print('-' * 30)
 
 
 if __name__ == "__main__":
