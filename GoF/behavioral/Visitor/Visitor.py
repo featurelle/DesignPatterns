@@ -11,32 +11,31 @@ from colorama import Fore, init
 
 class Visitor(ABC):
 
-    def __init__(self, name):
-        self.name = name
-
     @abstractmethod
+    def __init__(self, name, g_cb, s_cb, r_cb) -> None:
+        pass
+
+    # Тут еще должны быть сеттеры для назначения новых кэшбеков и тп
+    @property
+    def name(self):
+        return self._name
+
+    # Эти методы лучше бы были абстрактными, а поведение наследников - разное, но тут проще было так сделать
     def cashback_golden(self, card: GoldenCard) -> None:
-        pass
+        print(f'{card.name} card gives you %{self.g_cb} cashback in a {self.name}')
 
-    @abstractmethod
     def cashback_silver(self, card: SilverCard) -> None:
-        pass
+        print(f'{card.name} card gives you %{self.s_cb} cashback in a {self.name}')
 
-    @abstractmethod
     def cashback_regular(self, card: RegularCard) -> None:
-        pass
+        print(f'{card.name} card gives you %{self.r_cb} cashback in a {self.name}')
 
 
 class SmallStore(Visitor):
 
-    def cashback_golden(self, card: GoldenCard) -> None:
-        print(f'{card.name} card gives you %3 cashback in a small store')
 
-    def cashback_silver(self, card: SilverCard) -> None:
-        print(f'{card.name} card gives you %2 cashback in a small store')
+class LargeStore(Visitor):
 
-    def cashback_regular(self, card: RegularCard) -> None:
-        print(f'{card.name} card gives you %1 cashback in a small store')
 
 
 class Card(ABC):
