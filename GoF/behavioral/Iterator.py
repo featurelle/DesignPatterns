@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from functools import singledispatch
+from functools import singledispatchmethod
 from typing import IO
 
 
@@ -25,18 +25,18 @@ class Iterator(ABC):
 
 class Iterator2:
 
-    @singledispatch
+    @singledispatchmethod
     def __init__(self, thing_to_iterate):
         pass
 
     @__init__.register(list)
     def _(self):
-        self.type = 'list'  # На самом деле тут какой-то объект, отвечающий имплементации конкретного поведения
+        self.type = 'ListState()'  # На самом деле тут какой-то объект, отвечающий имплементации конкретного поведения
         pass    # Дальше различия в логике делегируются Стейту
 
     @__init__.register(IO)
     def _(self):
-        self.type = 'register'     # Кроме этой строчки, здесь все то же самое
+        self.type = 'FileState()'     # Кроме этой строчки, здесь все то же самое
         pass                       # Скорее всего, тут и кроется дьявол, ведь этого "дальше" может сколько угодно...
 
     def has_next(self):

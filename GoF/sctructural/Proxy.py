@@ -1,6 +1,8 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
 
+# TODO: валидацию клиента можно реализовать паттерном Цепочка
+
 
 class ServerInterface(ABC):
 
