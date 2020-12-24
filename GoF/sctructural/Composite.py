@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from typing import List
 
 
 class TodoList(ABC):
@@ -19,7 +20,7 @@ class Todo(TodoList):
 
 class Project(TodoList):
 
-    def __init__(self, name: str, stages: list[TodoList]):
+    def __init__(self, name: str, stages: List[TodoList]):
         self.name = name
         self.stages = stages
 
