@@ -15,6 +15,10 @@ class State(ABC):
     def type(self, *args):
         pass
 
+    @abstractmethod
+    def switch_style(self):
+        pass
+
 
 class AllUpper(State):
 

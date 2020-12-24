@@ -1,49 +1,83 @@
+from __future__ import annotations
 from abc import ABC, abstractmethod
-from functools import singledispatchmethod
-from typing import IO
+from typing import Any
 
 
-# Простой и понятный способ
-# Создаем интерфейс и обязуем его наследников иметь методы и выплевывать унифицированные значения.
-class Iterator(ABC):
+# Единственное, что требуется от Итерируемого класса - уметь возвращать свой Итератор
+class Iterable(ABC):
+
+    def __iter__(self) -> Iterator:
+        return self.iterate()
+
+    @abstractmethod
+    def iterate(self) -> Iterator:  # Метод конкретной коллекции должен возвращать конкретного Итератора
+        pass
+
+
+class Iterator(ABC, Iterable):
+
+    # С помощью дефолтных значений позволяю тонко настраивать создаваемый итератор, но Только если захочется
+    # При этом остается возможность ничего о них не знать и использовать только базовый функционал
+    def __init__(self,
+                 sequence: Iterable,
+                 step: int = 1,
+                 reverse: bool = False,
+                 finite: bool = True):
+        self.__sequence = sequence
+        self._step = step
+        self._reverse = reverse
+        self._finite = finite
+        self._current: Any
+
+    # C помощью сеттеров позволяю изменять поведение Итератора на ходу (тут бы подошел паттерн State или вроде того)
+    @property
+    def step(self):
+        return self._step
+
+    @step.setter
+    def step(self, step: int):
+        self._step = step
+
+    @property
+    def finite(self):
+        return self._finite
+
+    @finite.setter
+    def finite(self, finite: bool):
+        self._finite = finite
+
+    def reverse(self):
+        self._reverse = not self._reverse
+
+    @abstractmethod
+    def current(self) -> Any:
+        pass
 
     @abstractmethod
     def has_next(self) -> bool:
         pass
 
     @abstractmethod
-    def next_item(self) -> int:
+    def remove(self) -> None:
         pass
 
-
-# Другой ИЗВРАЩЕННЫЙ способ - перегруженные методы init прямо в интерфейсе, без абстракции, готовое решение.
-# Затем - использование чего-то вроде шаблона State для переключения между разными реализациями итератора
-# (Хотя со Стейтом можно и без перегрузки - НО чередой Ифов)
-# С одной стороны это все выглядит размазанно, с другой - для добавления типов не нужно плодить новые интерфейсы
-# В клиентском коде, Итератор предоставляет весь необходимый функционал. При необходимости наследовать и переписать.
-# Достаточно добавить реализацию в общий интерфейс Итератора. Плохо это или хорошо - хз, но так тоже можно :)
-
-class Iterator2:
-
-    @singledispatchmethod
-    def __init__(self, thing_to_iterate):
+    @abstractmethod
+    def next(self) -> Any:
         pass
 
-    @__init__.register(list)
-    def _(self):
-        self.type = 'ListState()'  # На самом деле тут какой-то объект, отвечающий имплементации конкретного поведения
-        pass    # Дальше различия в логике делегируются Стейту
+    @abstractmethod
+    def prev(self) -> Any:
+        pass
 
-    @__init__.register(IO)
-    def _(self):
-        self.type = 'FileState()'     # Кроме этой строчки, здесь все то же самое
-        pass                       # Скорее всего, тут и кроется дьявол, ведь этого "дальше" может сколько угодно...
+    # __next__ позволяет работать как через свой метод, так и через встроенную функцию next([GeneratorIterator])
+    # Поведенние как и у встроенных - когда следующего элемента нет, выплевывает ошибку StopIteration
+    def __next__(self):
+        if not self.has_next():
+            raise StopIteration
+        else:
+            self.next()
 
-    def has_next(self):
-        self.type.has_next()
+    # Итератор сам по себе также можно итерировать. Он просто возвращает самого себя.
+    def __iter__(self) -> Iterator:
+        return self
 
-    def next_item(self):
-        self.type.has_next()
-
-
-# А можно и перегружать методы has_next и next_item, но тогда им придется каждый раз проверять, кого они там итерируют
