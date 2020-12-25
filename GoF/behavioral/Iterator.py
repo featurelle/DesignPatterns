@@ -145,6 +145,8 @@ def count_expenses(iterator):
 
 def demo():
 
+    print()
+
     house1 = OldHouse(9, 5)
     house2 = VeryOldHouse(5, 12)
 
@@ -153,7 +155,7 @@ def demo():
 
     count_expenses(iterator1)
 
-    print(('-' * 50 + '\n') * 3)
+    print(('\n' + ('-' * 50) + '\n') * 3)
 
     count_expenses(iterator2)
 
