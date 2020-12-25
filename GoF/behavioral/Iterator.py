@@ -1,5 +1,6 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
+from typing import Union, Optional
 from functools import singledispatchmethod
 import random
 
@@ -38,8 +39,8 @@ class OldHouse(Iterable):
             plastic = random.choice([False] * 2 + [True] * 5)   # 5 к 2, что на этаже пластиковые окна
             self.floors.append([Window(300, 200, plastic) for _ in range(windows_per_floor)])
 
-    def iterate(self) -> OldHouseIterator:
-        return OldHouseIterator(self.floors)    # Для меня важный момент: передается копия, а не оригинал этажей
+    def iterate(self) -> RecursiveWindowListIterator:
+        return RecursiveWindowListIterator(self.floors)
 
 
 # VeryOldHouse хранит окна в виде словаря этажей
@@ -66,28 +67,11 @@ class Iterator(ABC):
         pass
 
 
-# Тут что-то вроде небольшой рекурсии получилось
-class ListIterator(Iterator):
-
-    def __init__(self, seq: list):
-        self.seq = seq
-        self.current = 0
-
-    @abstractmethod
-    def next(self):
-        pass
-
-    def has_next(self):
-        if self.current < len(self.seq) - 1:
-            return True
-        else:
-            return False
-
-
-class SimpleListIterator(ListIterator):     # Мб тут другой паттерн использовать для замены наследования)
+class SimpleWindowListIterator(Iterator):
 
     def __init__(self, seq: list[Window]):
-        super().__init__(seq)
+        self.seq = seq
+        self.current = 0
 
     def next(self) -> Window:
         if self.has_next():
@@ -97,43 +81,54 @@ class SimpleListIterator(ListIterator):     # Мб тут другой патт�
         else:
             raise StopIteration
 
-
-# А) Можно сделать один Итератор клиентом другого для разрешения вложенности.
-# Б) Можно использовать диспетчеризацию. Здесь оба метода представлены.
-# В) +++ Можно использовать другие шаблоны, но это уже слишком раздует демку.
-
-class OldHouseIteratorClient(ListIterator):
-
+    def has_next(self):
+        if self.current < len(self.seq) - 1:
+            return True
+        else:
+            return False
 
 
-class OldHouseIteratorDispatch(ListIterator):
+class RecursiveWindowListIterator(Iterator):
 
-    def __init__(self, seq: ):
-        super().__init__(seq)
-        current_floor = self.seq[self.current]
-        self.floor_iter = SimpleListIterator()
-
-
-
-class VeryOldHouseIterator(Iterator):
-
-    def __init__(self, floors: dict):
-        self.floors = floors
-        self.floor_keys = list(self.floors.keys())
+    def __init__(self, seq: list):
         self.current = 0
+        self.floors = [SimpleWindowListIterator(i) for i in seq]
 
     def next(self) -> Window:
         if self.has_next():
             try:
-                nested_iterator = SimpleListIterator(self.floors[self.current + 1])
-                yield nested_iterator.next()
+                return self.floors[self.current].next()
             except StopIteration:
                 self.current += 1
+                return self.next()
         else:
             raise StopIteration
 
     def has_next(self):
-        if self.current < len(self.floor_keys) - 1:
+        if self.current < len(self.floors) - 1:
+            return True
+        else:
+            return False
+
+
+class VeryOldHouseIterator(Iterator):
+
+    def __init__(self, seq: dict):
+        self.current = 0
+        self.floors = [SimpleWindowListIterator(i) for i in seq.values()]
+
+    def next(self) -> Window:
+        if self.has_next():
+            try:
+                return self.floors[self.current].next()
+            except StopIteration:
+                self.current += 1
+                return self.next()
+        else:
+            raise StopIteration
+
+    def has_next(self):
+        if self.current < len(self.floors) - 1:
             return True
         else:
             return False
@@ -147,8 +142,11 @@ def demo():
     iterator1 = house1.iterate()
     iterator2 = house2.iterate()
 
-    while iterator1.has_next():
-        print(iterator1.next().plastic)
+    while True:
+        try:
+            print(iterator1.next().plastic)
+        except StopIteration:
+            break
 
     print(('-' * 50 + '\n') * 3)
 
