@@ -54,13 +54,13 @@ class OnClick(ABC):
 class GetTextFromBuffer(OnClick):
 
     def execute(self):
-        self.receiver.show_text()
+        self.receiver.paste()
 
 
 class SayGoodbyeToBuffer(OnClick):
 
     def execute(self):
-        self.receiver.text = "Goodbye!"
+        self.receiver.copy("Goodbye!")
 
 
 class OpenMyLink(OnClick):
@@ -80,20 +80,18 @@ class TextBuffer:
     def __init__(self):
         self._text = "Hello World"
 
-    @property
-    def text(self):
-        return self._text
+    def paste(self):
+        print(self._text)
 
-    @text.setter
-    def text(self, text):
+    def copy(self, text):
         self._text = text
-
-    def show_text(self):
-        print(self.text)
+        print('Copied to the clipboard!')
 
 
-# Другой может быть вообще чем угодно, например браузером (открывателем линков)
-class LinkOpener:
+# Другой может быть вообще чем угодно, например браузером
+class Browser:
+
+    ...
 
     def open_link(self, link):
         print('Opening https://' + link)
@@ -110,7 +108,7 @@ if __name__ == "__main__":
     gb_com = SayGoodbyeToBuffer(buffer)
     button2 = Button(gb_com)
 
-    link_opener = LinkOpener()
+    link_opener = Browser()
     link_command = OpenMyLink(link_opener, 'google.com')
     picture = Picture(link_command)
 

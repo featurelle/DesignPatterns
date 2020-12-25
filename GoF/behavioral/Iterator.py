@@ -98,20 +98,21 @@ class SimpleListIterator(ListIterator):     # Мб тут другой патт�
             raise StopIteration
 
 
-class OldHouseIterator(ListIterator):
+# А) Можно сделать один Итератор клиентом другого для разрешения вложенности.
+# Б) Можно использовать диспетчеризацию. Здесь оба метода представлены.
+# В) +++ Можно использовать другие шаблоны, но это уже слишком раздует демку.
 
-    def __init__(self, seq: list[list[Window]]):
+class OldHouseIteratorClient(ListIterator):
+
+
+
+class OldHouseIteratorDispatch(ListIterator):
+
+    def __init__(self, seq: ):
         super().__init__(seq)
+        current_floor = self.seq[self.current]
+        self.floor_iter = SimpleListIterator()
 
-    def next(self) -> Window:
-        if self.has_next():
-            try:
-                nested_iterator = SimpleListIterator(self.seq[self.current])
-                yield nested_iterator.next()
-            except StopIteration:
-                self.current += 1
-        else:
-            raise StopIteration
 
 
 class VeryOldHouseIterator(Iterator):
