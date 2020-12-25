@@ -1,14 +1,11 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
-from typing import Union, Optional
-from functools import singledispatchmethod
 import random
 
 
-# Задача: Посчитать количество пены, необходимое для герметизации всех деревянных окон в нескольких домах.
+# Задача: Посчитать расходы на замену всех деревянных окон в нескольких домах пластиковыми.
 # Окна приведены к одному классу, но вот проблема: классы домов сруктурируют и хранят окна по-разному!
-# При сохранении Mutability - вторая выполнимая задача - поменять все деревянные окна на пластиковые.
-# В моем примере сами Итераторы - тоже Коллекции, которые можно проитерировать.
+# При сохранении Mutability - вторая выполнимая задача - поменять все деревянные окна на пластиковые во время прохода.
 
 
 # Единственное, что требуется от Итерируемого класса - уметь возвращать свой Итератор
@@ -134,6 +131,18 @@ class VeryOldHouseIterator(Iterator):
             return False
 
 
+def count_expenses(iterator):
+
+    expenses = 0
+    while True:
+        try:
+            if not (window := iterator.next()).plastic:
+                expenses += window.width + window.length
+        except StopIteration:
+            print('Total expenses on that house will be: ', expenses, '$')
+            break
+
+
 def demo():
 
     house1 = OldHouse(9, 5)
@@ -142,19 +151,11 @@ def demo():
     iterator1 = house1.iterate()
     iterator2 = house2.iterate()
 
-    while True:
-        try:
-            print(iterator1.next().plastic)
-        except StopIteration:
-            break
+    count_expenses(iterator1)
 
     print(('-' * 50 + '\n') * 3)
 
-    while True:
-        try:
-            print(iterator2.next().plastic)
-        except StopIteration:
-            break
+    count_expenses(iterator2)
 
 
 if __name__ == "__main__":

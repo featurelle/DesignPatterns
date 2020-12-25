@@ -1,56 +1,48 @@
+import random
 from abc import ABC, abstractmethod
-from typing import List
+
+# Другой взгляд на задачу, описанную у меня в Итераторе
 
 
-class TodoList(ABC):
-
-    @abstractmethod
-    def make_html(self):
-        pass
+class TownComponent(ABC):
+    pass
 
 
-class Todo(TodoList):
+class Window(TownComponent):
 
-    def __init__(self, task: str):
-        self.task = task
-
-    def make_html(self):
-        return f'<input type="checkbox">{self.task}'
-
-
-class Project(TodoList):
-
-    def __init__(self, name: str, stages: List[TodoList]):
-        self.name = name
-        self.stages = stages
-
-    def make_html(self):
-        html = f'<h1>{self.name}</h1>\n<ul>\n'
-        for stage in self.stages:
-            html += f'<li>{stage.make_html()}</li>\n'
-        return html + '</ul>\n'
+    def __init__(self, width: int, length: int, plastic: bool = False):
+        self.width = width
+        self.length = length
+        self.plastic = plastic
 
 
-def demo():
-    work = [Todo('Wake up'),
-            Todo('Go to work'),
-            Todo('Survive'),
-            Todo('Go Home'),
-            Todo('Sleep'),
-            Todo('Repeat')]
-
-    project1 = Project('Work', work)
-    task1 = Todo('Buy food')
-    task2 = Todo('Weekend party')
-
-    bigger_project = [project1, task1, task2]
-
-    project2 = Project('4 days plan', bigger_project)
-
-    print(project1.make_html())
-    print('\n\n')
-    print(project2.make_html())
+class Composite(TownComponent):
+    pass
 
 
-if __name__ == "__main__":
-    demo()
+class Floor(Composite):
+    pass
+
+
+# Old House хранит окна в виде списков окон внутри списка этажей
+class OldHouse(Composite):
+
+    def __init__(self, floors: int, windows_per_floor: int):
+        self.floors = list()
+        for _ in range(floors):
+            plastic = random.choice([False] * 2 + [True] * 5)   # 5 к 2, что на этаже пластиковые окна
+            self.floors.append([Window(300, 200, plastic) for _ in range(windows_per_floor)])
+
+
+# VeryOldHouse хранит окна в виде словаря этажей
+class VeryOldHouse(Composite):
+
+    def __init__(self, floors: int, windows_per_floor: int):
+        self.floors = dict()
+        for i in range(floors):
+            plastic = random.choice([False] * 9 + [True] * 2)   # 9 к 2, что на этаже деревянные окна
+            self.floors[i + 1] = ([Window(200, 150, plastic) for _ in range(windows_per_floor)])
+
+
+class Town:
+    pass
