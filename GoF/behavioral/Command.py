@@ -5,8 +5,8 @@ from abc import ABC, abstractmethod
 # Класс Инвокера. Может быть кто угодно, главное чтобы он принимал какую-то команду и мог ее вызывать.
 class Invoker:
 
-    def __init__(self, command: OnClick):
-        self._command = command
+    def __init__(self):
+        self._command = None
 
     @property
     def command(self):
@@ -17,21 +17,53 @@ class Invoker:
         self._command = command
 
     def invoke(self):
-        self.command.execute()
+        if self._command:
+            self.command.execute()
 
 
-# TODO: Написать элементам интерфейса разных инвокеров onclick, onkeydown и тп для реализма. И пусть наследуют.
-# Инвокеры как кнопки на пульте, а данный класс Button скорее пульт в целом, содержащий список своих кнопок (слушатели?)
-# Конкретные инвокеры могут быть разные и вести себя во время исполнения команды могут по-разному.
-# Если сравнивать с пультом, то кнопки имеют разную форму, могут быть сенсорными или обычными, светиться или пищать.
-class Button(Invoker):
+# TODO: прибраться тут!
+class GUI(ABC):
+
+    def __init__(self):
+        self._onclick = OnClick()
+        self._onkeypress = OnKeyPress()
+
+    @property
+    def onclick(self):
+        return self._onclick
+
+    @property
+    def onkeypress(self):
+        return self._onkeypress
+
+    @onclick.setter
+    def onclick(self, invoker: Invoker):
+        self._onclick = invoker
+
+    @onkeypress.setter
+    def onkeypress(self, invoker: Invoker):
+        self._onkeypress = invoker
+
+
+class Button:
+
+    def __init__(self):
+        self.onclick = None
+        self.onkeypress = None
+
+
+class Picture:
+    pass
+
+
+class OnClick(Invoker):
 
     def invoke(self):
         print('Button was pressed')
         super().invoke()
 
 
-class Picture(Invoker):
+class OnKeyPress(Invoker):
 
     def invoke(self):
         print('A picture darkened')
@@ -40,7 +72,7 @@ class Picture(Invoker):
 
 # Интерфейс команды задает только метод, с которым умеют работать инвоукеры и необходимость иметь какой-то ресивер.
 # Строго говоря, последнее можно и не делать, команда может быть достаточно простой, чтобы выполняться без ресивера.
-class OnClick(ABC):
+class Command(ABC):
 
     def __init__(self, receiver):
         self.receiver = receiver
@@ -51,19 +83,19 @@ class OnClick(ABC):
 
 
 # Конкретные команды многочисленны и разнообразны, как и их ресиверы
-class GetTextFromBuffer(OnClick):
+class GetTextFromBuffer(Command):
 
     def execute(self):
         self.receiver.paste()
 
 
-class SayGoodbyeToBuffer(OnClick):
+class SayGoodbyeToBuffer(Command):
 
     def execute(self):
         self.receiver.copy("Goodbye!")
 
 
-class OpenMyLink(OnClick):
+class OpenMyLink(Command):
 
     def __init__(self, receiver, link):
         super().__init__(receiver)
@@ -103,14 +135,14 @@ if __name__ == "__main__":
     buffer = TextBuffer()
 
     get_text = GetTextFromBuffer(buffer)
-    button1 = Button(get_text)
+    button1 = OnClick(get_text)
 
     gb_com = SayGoodbyeToBuffer(buffer)
-    button2 = Button(gb_com)
+    button2 = OnClick(gb_com)
 
     link_opener = Browser()
     link_command = OpenMyLink(link_opener, 'google.com')
-    picture = Picture(link_command)
+    picture = OnKeyPress(link_command)
 
     button1.invoke()
     button2.invoke()

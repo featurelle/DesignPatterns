@@ -108,36 +108,21 @@ class RecursiveWindowListIterator(Iterator):
             return False
 
 
-class VeryOldHouseIterator(Iterator):
+class VeryOldHouseIterator(RecursiveWindowListIterator):
 
     def __init__(self, seq: dict):
         self.current = 0
         self.floors = [SimpleWindowListIterator(i) for i in seq.values()]
 
-    def next(self) -> Window:
-        if self.has_next():
-            try:
-                return self.floors[self.current].next()
-            except StopIteration:
-                self.current += 1
-                return self.next()
-        else:
-            raise StopIteration
 
-    def has_next(self):
-        if self.current < len(self.floors) - 1:
-            return True
-        else:
-            return False
+def count_expenses(house):
 
-
-def count_expenses(iterator):
-
+    iterator = house.iterate()
     expenses = 0
     while True:
         try:
             if not (window := iterator.next()).plastic:
-                expenses += window.width + window.length
+                expenses += (window.width + window.length) * 2
         except StopIteration:
             print('Total expenses on that house will be: ', expenses, '$')
             break
@@ -150,14 +135,11 @@ def demo():
     house1 = OldHouse(9, 5)
     house2 = VeryOldHouse(5, 12)
 
-    iterator1 = house1.iterate()
-    iterator2 = house2.iterate()
-
-    count_expenses(iterator1)
+    count_expenses(house1)
 
     print(('\n' + ('-' * 50) + '\n') * 3)
 
-    count_expenses(iterator2)
+    count_expenses(house2)
 
 
 if __name__ == "__main__":
