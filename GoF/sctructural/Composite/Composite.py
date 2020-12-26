@@ -17,14 +17,15 @@ class Window(TownComponent):
 
 
 class Composite(TownComponent):
-    pass
+
+    def __init__(self, children: TownComponent):
+        self.children
 
 
 class Floor(Composite):
     pass
 
 
-# Old House хранит окна в виде списков окон внутри списка этажей
 class OldHouse(Composite):
 
     def __init__(self, floors: int, windows_per_floor: int):
@@ -34,7 +35,6 @@ class OldHouse(Composite):
             self.floors.append([Window(300, 200, plastic) for _ in range(windows_per_floor)])
 
 
-# VeryOldHouse хранит окна в виде словаря этажей
 class VeryOldHouse(Composite):
 
     def __init__(self, floors: int, windows_per_floor: int):
