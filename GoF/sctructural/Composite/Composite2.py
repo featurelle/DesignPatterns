@@ -3,7 +3,8 @@ from abc import ABC, abstractmethod
 
 class FileSystem(ABC):
 
-    pass
+    def op(self):
+        raise NotImplementedError
 
 
 class Directory(FileSystem):

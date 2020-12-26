@@ -5,7 +5,16 @@ from abc import ABC, abstractmethod
 
 
 class TownComponent(ABC):
-    pass
+
+
+    def get_nested(self):
+        return []
+
+
+    def add(self):
+        raise NotImplementedError
+
+    def
 
 
 class Window(TownComponent):
@@ -20,6 +29,10 @@ class Composite(TownComponent):
 
     def __init__(self, children: TownComponent):
         self.children
+
+
+class Section(Composite):
+    pass
 
 
 class Floor(Composite):
@@ -44,5 +57,14 @@ class VeryOldHouse(Composite):
             self.floors[i + 1] = ([Window(200, 150, plastic) for _ in range(windows_per_floor)])
 
 
-class Town:
+class AdministrativeBuilding(Composite):
     pass
+
+
+class Town(Composite):
+    pass
+
+
+class Country(Composite):
+    pass
+
