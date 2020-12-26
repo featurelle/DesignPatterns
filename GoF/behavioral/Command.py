@@ -2,31 +2,11 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 
 
-# Класс Инвокера. Может быть кто угодно, главное чтобы он принимал какую-то команду и мог ее вызывать.
-class Invoker:
-
-    def __init__(self):
-        self._command = None
-
-    @property
-    def command(self):
-        return self._command
-
-    @command.setter
-    def command(self, command):
-        self._command = command
-
-    def invoke(self):
-        if self._command:
-            self.command.execute()
-
-
-# TODO: прибраться тут!
 class GUI(ABC):
 
-    def __init__(self):
-        self._onclick = OnClick()
-        self._onkeypress = OnKeyPress()
+    def __init__(self, onclick: Command = None, onkeypress: Command = None):
+        self._onclick = onclick or NullCommand()
+        self._onkeypress = onkeypress or NullCommand()
 
     @property
     def onclick(self):
@@ -37,37 +17,48 @@ class GUI(ABC):
         return self._onkeypress
 
     @onclick.setter
-    def onclick(self, invoker: Invoker):
-        self._onclick = invoker
+    def onclick(self, command: Command):
+        self._onclick = command
 
     @onkeypress.setter
-    def onkeypress(self, invoker: Invoker):
-        self._onkeypress = invoker
+    def onkeypress(self, command: Command):
+        self._onkeypress = command
+
+    @abstractmethod
+    def click(self):
+        pass
+
+    @abstractmethod
+    def press(self):
+        pass
 
 
-class Button:
+class Button(GUI):
 
-    def __init__(self):
-        self.onclick = None
-        self.onkeypress = None
+    def click(self):
+        self.animate()
+        self._onclick.execute()
 
+    def press(self):
+        self.animate()
+        self._onkeypress.execute()
 
-class Picture:
-    pass
-
-
-class OnClick(Invoker):
-
-    def invoke(self):
-        print('Button was pressed')
-        super().invoke()
+    def animate(self):
+        print('Button was touched')
 
 
-class OnKeyPress(Invoker):
+class Picture(GUI):
 
-    def invoke(self):
-        print('A picture darkened')
-        super().invoke()
+    def click(self):
+        self.animate()
+        self._onclick.execute()
+
+    def press(self):
+        self.animate()
+        self._onkeypress.execute()
+
+    def animate(self):
+        print('Picture darkened')
 
 
 # Интерфейс команды задает только метод, с которым умеют работать инвоукеры и необходимость иметь какой-то ресивер.
@@ -82,14 +73,24 @@ class Command(ABC):
         pass
 
 
+# Коротко про Нулл-обджект паттерн:
+class NullCommand(Command):
+
+    def __init__(self):
+        pass
+
+    def execute(self):
+        print('Nothing happened')
+
+
 # Конкретные команды многочисленны и разнообразны, как и их ресиверы
-class GetTextFromBuffer(Command):
+class GetTextFromClipboard(Command):
 
     def execute(self):
         self.receiver.paste()
 
 
-class SayGoodbyeToBuffer(Command):
+class SayGoodbyeToClipboard(Command):
 
     def execute(self):
         self.receiver.copy("Goodbye!")
@@ -107,7 +108,7 @@ class OpenMyLink(Command):
 
 # Один ресивер - это буфер
 # Важно, что результат возвращает именно ресивер, в данном случае - печатает в консоль
-class TextBuffer:
+class Clipboard:
 
     def __init__(self):
         self._text = "Hello World"
@@ -132,22 +133,28 @@ class Browser:
 # Остается только насоздавать кнопок и картинок, команд и присвоить кнопкам и картинкам команды
 # Команды можно менять на ходу, не меняя код инвокеров и ресиверов и не засоряя клиентский код простынями условий elif
 if __name__ == "__main__":
-    buffer = TextBuffer()
 
-    get_text = GetTextFromBuffer(buffer)
-    button1 = OnClick(get_text)
+    # /// Ресиверы
+    clipboard = Clipboard()
+    browser = Browser()
 
-    gb_com = SayGoodbyeToBuffer(buffer)
-    button2 = OnClick(gb_com)
+    # /// Команды
+    get_text = GetTextFromClipboard(clipboard)
+    goodbye_command = SayGoodbyeToClipboard(clipboard)
+    link_command = OpenMyLink(browser, 'google.com')
 
-    link_opener = Browser()
-    link_command = OpenMyLink(link_opener, 'google.com')
-    picture = OnKeyPress(link_command)
+    # /// Инвоукеры
+    button = Button(onclick=get_text)
+    picture = Picture(onkeypress=link_command)
 
-    button1.invoke()
-    button2.invoke()
-    picture.invoke()
+    # Слот пустой
+    button.press()
+    button.onkeypress = goodbye_command
+    button.press()
+    button.click()
 
-    picture.command = get_text
-
-    picture.invoke()
+    # И так далее
+    picture.press()
+    picture.click()
+    picture.onclick = 0  # Exception должен был бы быть, ан-нет!
+    # А зачем сеттеры с объявленными типами, если они все равно позволяют любую чушь назначить?
