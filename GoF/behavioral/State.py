@@ -65,14 +65,14 @@ class InfiniteStateVisitor(StateVisitor):
         try:
             return state.next()
         except StopIteration:
-            state.iterator.current = 0
+            state.iterator.current = -1
             return state.next()
 
     def backward(self, state: BackwardDirectionIter):
         try:
             return state.next()
         except StopIteration:
-            state.iterator.current = len(state.iterator.seq) - 1
+            state.iterator.current = len(state.iterator.seq)
             return state.next()
 
     def toggle_finite(self):
@@ -84,8 +84,8 @@ class ForwardDirectionIter(IteratorState):
 
     def next(self):
         if self.has_next():
-            item = self.iterator.seq[self.iterator.current]
             self.iterator.current += 1
+            item = self.iterator.seq[self.iterator.current]
             return item
         else:
             raise StopIteration
@@ -107,8 +107,8 @@ class BackwardDirectionIter(IteratorState):
 
     def next(self):
         if self.has_next():
-            item = self.iterator.seq[self.iterator.current]
             self.iterator.current -= 1
+            item = self.iterator.seq[self.iterator.current]
             return item
         else:
             raise StopIteration
@@ -130,7 +130,7 @@ class ListIterator:
 
     def __init__(self, seq: list):
         self.seq = seq
-        self.current = 0
+        self.current = -1
         self.direction = ForwardDirectionIter(self)
         self.finite = FiniteStateVisitor(self)
 

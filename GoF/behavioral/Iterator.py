@@ -52,6 +52,13 @@ class VeryOldHouse(Iterable):
     def iterate(self) -> VeryOldHouseIterator:
         return VeryOldHouseIterator(self.floors)
 
+    # Как на самом деле надо было это решать (по крайней мере в данном случае):
+    #
+    # def iterate(self) -> RecursiveWindowListIterator:
+    #     return RecursiveWindowListIterator(self.floors.values())
+    #
+    # И никакой третий вид Итераторов был бы не нужен.
+
 
 class Iterator(ABC):
 
