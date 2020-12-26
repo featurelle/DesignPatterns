@@ -85,6 +85,7 @@ class SimpleWindowListIterator(Iterator):
             return False
 
 
+# Шаблон
 class RecursiveWindowListIterator(Iterator):
 
     def __init__(self, seq: list):
@@ -115,7 +116,7 @@ class VeryOldHouseIterator(RecursiveWindowListIterator):
         self.floors = [SimpleWindowListIterator(i) for i in seq.values()]
 
 
-def count_expenses(house):
+def calc_expenses(house):
 
     iterator = house.iterate()
     expenses = 0
@@ -124,14 +125,9 @@ def count_expenses(house):
             if not (window := iterator.next()).plastic:
                 expenses += (window.width + window.length) * 2
         except StopIteration:
-            print('Total expenses on that house will be: ', expenses, '$')
-            break
+            return expenses
 
 
-# Использование Mutability (и его потенциальная опасность) - изменение оригинальной структуры во время прохода
-# TODO: Можно было бы организовать и удаление окон из итератора с последующей передачей его другому методу,
-# Который, например, работает только с деревянными окнами - заменяет их.
-# Но тогда уже нужно свойство Immutability для оригинального объекта, а как при этом менять окна?
 def put_plastic(house):
 
     iterator = house.iterate()
@@ -158,18 +154,25 @@ def is_job_done(house):
 
 def demo():
 
-    budget = 20000
+    budget = 30000
 
     print()
 
-    house1 = OldHouse(9, 5)
-    house2 = VeryOldHouse(5, 12)
+    houses = OldHouse(9, 5), VeryOldHouse(5, 12)
 
-    count_expenses(house1)
+    for house in houses:
 
-    print(('\n' + ('-' * 50) + '\n') * 3)
+        exp = calc_expenses(house)
+        print('Total expenses on the old house will be: ', exp, '$')
 
-    count_expenses(house2)
+        if exp <= budget:
+            budget -= exp
+            put_plastic(house)
+            print('Well done!' if is_job_done(house) else 'Wow, someone must have stolen all our taxes. Typical UA :(')
+        else:
+            print('Unfortunately, we have no funds to renovate this old house.')
+
+        print(('\n' + ('-' * 50) + '\n') * 3)
 
 
 if __name__ == "__main__":
