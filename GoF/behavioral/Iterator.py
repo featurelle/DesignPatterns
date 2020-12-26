@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 import random
 
 
-# Задача: Посчитать расходы на замену всех деревянных окон в нескольких домах пластиковыми.
+# Задача: Посчитать расходы на замену всех деревянных окон в нескольких домах.
 # Окна приведены к одному классу, но вот проблема: классы домов сруктурируют и хранят окна по-разному!
 # При сохранении Mutability - вторая выполнимая задача - поменять все деревянные окна на пластиковые во время прохода.
 
@@ -128,7 +128,36 @@ def count_expenses(house):
             break
 
 
+# Использование Mutability (и его потенциальная опасность) - изменение оригинальной структуры во время прохода
+# TODO: Можно было бы организовать и удаление окон из итератора с последующей передачей его другому методу
+# Но тогда уже нужно свойство Immutability для оригинального объекта
+# Но уже без лишних значений, т.к. пластиковые в данном контексте уже не нужны
+def put_plastic(house):
+
+    iterator = house.iterate()
+    while True:
+        try:
+            if not (window := iterator.next()).plastic:
+                window.plastic = True   # Тут меняется состояние исходного объекта
+        except StopIteration:
+            break
+
+
+# А вот тут легкий вариант Композита мог бы сам выдавать подобный метод
+def is_job_done(house):
+
+    iterator = house.iterate()
+    while True:
+        try:
+            if not iterator.next().plastic:
+                return False
+        except StopIteration:
+            return True
+
+
 def demo():
+
+    budget = 20000
 
     print()
 
