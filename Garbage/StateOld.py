@@ -5,7 +5,7 @@ class State:
         self.stations: list
         self.pos = 0
         self.name: str
-
+W
     def scan(self):
         self.pos += 1
 
@@ -23,7 +23,7 @@ class AmState(State):
 
     def toggle_amfm(self):
         print("Switching to FM")
-        self.radio.type = self.radio.fmstate
+        self.radio.state = self.radio.fmstate
 
 
 class FmState(State):
