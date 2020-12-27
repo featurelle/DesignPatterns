@@ -135,6 +135,11 @@ def calc_expenses(house):
             return expenses
 
 
+def stolen_money():
+
+    return random.choice([True, False])
+
+
 def put_plastic(house):
 
     iterator = house.iterate()
@@ -174,7 +179,8 @@ def demo():
 
         if exp <= budget:
             budget -= exp
-            put_plastic(house)
+            if not stolen_money():
+                put_plastic(house)
             print('Well done!' if is_job_done(house) else 'Wow, someone must have stolen all our taxes. Typical UA :(')
         else:
             print('Unfortunately, we have no funds to renovate this old house.')
