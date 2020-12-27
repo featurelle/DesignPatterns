@@ -26,6 +26,10 @@ class PasswordValidation(ABC):
     def __init__(self, then: PasswordValidation = None):
         self.__then = then
 
+    def then(self, then: PasswordValidation):
+        self.__then = then
+        return self.__then
+
     @abstractmethod
     def check(self, password: NewPassword) -> None:
         pass
