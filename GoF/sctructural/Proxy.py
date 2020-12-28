@@ -1,68 +1,58 @@
-from __future__ import annotations
-from abc import ABC, abstractmethod
-
-# TODO: валидацию клиента можно реализовать паттерном Цепочка
+import GoF.behavioral.Chain.ChainOfATM as Chn
 
 
-class ServerInterface(ABC):
+class ATMProxyGuard(Chn.ATMInterface):
 
-    @abstractmethod
-    def load(self, *args):
-        pass
+    def __init__(self, atm: Chn.ATM):
+        self.__atm = atm
+        self.__history: tuple = tuple()
 
-    @abstractmethod
-    def response(self, *args):
-        pass
+    # Помимо всего прочего...
+    # А если бы таких проверок было много, то получился бы опять Чейн :)
+    def cash_out(self, amount: int):
 
-    @abstractmethod
-    def status(self, *args):
-        pass
-
-
-# Есть разные виды Прокси, тут показана простая абстрактная солянка из всех
-# Не очень понятно, зачем что-то "скрывать" от клиента, которым являюсь я сам...
-# Разве что Сервер мне недоступен и я не могу на нем сделать нужные проверки
-# Но тогда неясно, зачем мне интерфейс отдельный, можно же по честному наследовать прокси от сервера...
-class Server(ServerInterface):
-
-    def load(self):
-        pass    # Трудоемкий процесс запуска
-
-    def response(self, request):
-        return f'{request} proceeded'    # Ответ на какой-то запрос, простой, но требует запуска
-
-    def status(self):
-        return 'Hello World'    # В некоторых случаях не требует запуска, возвращая что-то стандартное
-
-
-# Класс Прокси имитирует сервер для клиента
-class Proxy(ServerInterface):
-
-    def __init__(self):
-        self.server = Server()    # Хоть убей, не вижу смысла в паттерне, если бы клиент передавал настоящий сервис
-        self.cash = dict()   # Кэш с последними вызовами и параметрами
-
-    def load(self, auth_keys, ip):
-        if auth_keys != 'some_injection':   # Прокси защищает сервер от хакерских атак
-            print('Loading...')
-            self.server.load()
+        # Оригинальный банкомат не поддерживает проверки, это задача для прокси.
+        if self.__atm.total() < amount:
+            print('Not enough money. Please try entering less.')
         else:
-            print('Oops...')
-            self.block(ip)
+            if all([amount % banknote for banknote in self.available()]):
+                print(f'Sorry, wrong sum. Don\'t have bills to give out. Available: ')
+                print(*self.available(), sep='      ')
+            else:
+                # При кэшауте последний снимок банкнот теряет смысл
+                self.__history = tuple()
+                self.__atm.cash_out(amount)
+                print()
 
-    def block(self, ip):
-        pass
+    # Пересчет доступных банкнот запрашивается только если были произведены какие-то операции. Иначе - из истории.
+    def available(self) -> tuple:
+        if not self.__history:
+            self.__history = self.__atm.available()
+        else:
+            print('This message is printed when the proxy imitates the real atm.')
+        return self.__history
 
-    def response(self, request):
-        if request not in self.cash['response']:    # Сервер вызывается, только если ответ на запрос нельзя взять из кэш
-            self.cash['response'][request] = self.server.response(request)
-        return self.cash['response'][request]
 
-    def status(self, id):
-        if self.cash['status'][id]:
-            ...     # Та же самая логика
+def demo():
 
-# И все-таки вопрос: Зачем интерфейс, если можно наследовать прокси от Сервера? Что этим решается?
-# TODO: лучше было бы сделать Прокси для какой-то библиотеки,
-#  которая выдает ошибки и ложит программу, если клиент что-то не так ввел
-#  например, этот Прокси может проверять, правильно ли введены аргументы для функций и тп
+    modules = [Chn.Module(i, 20) for i in [500, 200, 100, 50]]
+    modules[0].then(modules[1]).then(modules[2]).then(modules[3])
+
+    atm = Chn.ATM(modules)
+    atm_proxy = ATMProxyGuard(atm)
+
+    atm_proxy.cash_out(120)
+    atm_proxy.cash_out(5000)
+    atm_proxy.cash_out(3250)
+    atm_proxy.cash_out(7400)
+    atm_proxy.cash_out(5750)
+    atm_proxy.cash_out(400)
+
+    h1 = atm_proxy.available()
+    h2 = atm_proxy.available()
+    print('Were last two results the same object? ' + str(h1 == h2))
+
+
+if __name__ == "__main__":
+
+    demo()

@@ -102,7 +102,7 @@ class ArithmeticParser(MathParser):
             return float(self.then.parse(math))
 
 
-# Последний парсер получает то, что не смогли обработать все остальные. Это либо готовое число, либо ошибка в строке.
+# Последний 'парсер' получает то, что не смогли обработать все остальные. Это либо готовое число, либо ошибка в строке.
 class ErrorHandler(MathParser):
 
     def parse(self, math: str):
@@ -123,7 +123,7 @@ def do_math():
 
     calculator = parsers[0]
 
-    math_str = '(3 - 15 - 247 * (20 - ((12 - 2 * (20 / (10 + 4))) - 14)) / 15 - -(10 - 2) + 100) * 2 + 10000 / 250'
+    math_str = '(3 - 15 + 99 - 247 * (20 - ((12 - 2 * (20 / (10 + 4))) - 14)) / 15 - -(10 - 2) + 100) * 2 + 10000 / 250'
     print('I say : ' + math_str + ' = ', end='')
 
     result = calculator.parse(math_str)
