@@ -99,8 +99,13 @@ class ErrorHandler(MathParser):
             return float(math)
 
 
-math_str = '(3 - 15 - (20 - ((12 - 2 * (20 / (10 + 4))) - 14)) - -(10 - 2) + 100) * 2 + 100 / 250'
-print(math_str + ' = ', end='')
-calculator = BracketsParser(Multiplication(Division(Substraction(Addition(ErrorHandler())))))
-result = calculator.parse(math_str)
-print(result)
+def do_math():
+    math_str = '(3 - 15 - (20 - ((12 - 2 * (20 / (10 + 4))) - 14)) - -(10 - 2) + 100) * 2 + 10000 / 250'
+    print(math_str + ' = ', end='')
+    calculator = BracketsParser(Multiplication(Division(Substraction(Addition(ErrorHandler())))))
+    result = calculator.parse(math_str)
+    print(round(result, 2))
+
+
+if __name__ == "__main__":
+    do_math()
