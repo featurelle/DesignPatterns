@@ -17,24 +17,32 @@ class MathParser:
 class BracketsParser(MathParser):
 
     def parse(self, math: str):
-        search = str(re.search(r'(.+)', math)).strip('()')
+        search = re.search(r'\([0-9 +*/-]+\)', math)
         if search:
-            result = self.parse(search)
-            modified = math.replace('(' + search + ')', str(result))
+            match = search.group(0).strip('()')
+            print(match)
+            result = self._then.parse(match)
+            print(result)
+            modified = math.replace('(' + match + ')', str(result))
+            print(modified)
             return self.parse(modified)
         else:
-            return int(self._then.parse(search))
+            return int(self._then.parse(math))
 
 
 class Substitution(MathParser):
 
     def parse(self, math: str):
-        search = str(re.search(r'\d+ - \d+', math)).strip('()')
+        search = re.search(r'-?\d+ - -?\d+', math)
         if search:
-            x = int(str(re.search(r'^\d+', search)))
-            y = int(str(re.search(r'\d+$', search)))
-            result = x + y
-            modified = math.replace(search, str(result))
+            match = search.group(0)
+            print(match)
+            x = int(re.search(r'^-?\d+', match).group(0))
+            y = int(re.search(r'-?\d+$', match).group(0))
+            result = x - y
+            print(result)
+            modified = math.replace(match, str(result))
+            print(modified)
             return self.parse(modified)
         else:
             return int(math)
