@@ -1,53 +1,138 @@
-from colorama import Fore, Back, Style, init
-import pygame
-from pygame.rect import Rect
+from __future__ import annotations
 import sys
 import time
+import random
+
+import pygame
+from pygame.rect import Rect
 
 
 class GraphicsType:
 
     def __init__(self, img_path: str):
         self.img = pygame.image.load(img_path)
-        self.size = self.img.get_size()
 
-    def draw(self, canvas: Rect, speed: list[float]):
-        screen.blit(ball, canvas)
+    def size(self):
+        return self.img.get_size()
 
-
-pygame.init()
-
-size = width, height = 1600, 900
-speed = [1, 1]
-black = 0, 0, 0
-
-screen = pygame.display.set_mode(size)
+    def draw(self, screen, canvas: Rect):
+        screen.blit(self.img, canvas)
 
 
-ball = pygame.image.load("img/rose.png")
-size = ball.get_size()
-canvas = pygame.rect.Rect(800, 450, *size)
-# canvas = ball.get_rect()
-# canvas.x = 800
-# canvas.y = 450
-ball2 = pygame.image.load("img/blue.png")
-canvas2 = pygame.rect.Rect(200, 200, *size)
+class Graphics:
+
+    def __init__(self, type: GraphicsType, canvas: Rect, speed_x: int, speed_y: int):
+        self.type = type
+        self.canvas = canvas
+        self.speed_x = speed_x
+        self.speed_y = speed_y
+
+    def draw(self, screen):
+        self.type.draw(screen, self.canvas)
+
+    def move(self):
+        self.canvas = self.canvas.move(self.speed_x, self.speed_y)
+
+    @property
+    def left(self):
+        return self.canvas.left
+
+    @property
+    def right(self):
+        return self.canvas.right
+
+    @property
+    def top(self):
+        return self.canvas.top
+
+    @property
+    def bottom(self):
+        return self.canvas.bottom
 
 
-while 1:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            sys.exit()
+class GraphicsFactory:
 
-    canvas = canvas.move(speed)
-    canvas2 = canvas2.move(speed)
-    if canvas.left < 0 or canvas.right > width:
-        speed[0] = -speed[0]
-    if canvas.top < 0 or canvas.bottom > height:
-        speed[1] = -speed[1]
-    time.sleep(0.05)
+    __particles = dict()
 
-    screen.fill(black)
-    screen.blit(ball, canvas)
-    screen.blit(ball, canvas2)
-    pygame.display.flip()
+    @classmethod
+    def get_template(cls, img_path: str):
+        if img_path not in cls.__particles:
+            cls.__particles[img_path] = GraphicsType(img_path)
+        return cls.__particles[img_path]
+
+
+class Game:
+
+    IMG_ADDRESSES = 'img/green.png', 'img/blue.png', 'img/rose.png'
+
+    def __init__(self, particles_amount: int):
+
+        self.particles_amount = particles_amount
+        self.particles: set[Graphics] = set()
+        self.size = self.width, self.height = 1600, 900
+        self.screen = None
+        self.black = 0, 0, 0
+
+    def load(self):
+
+        pygame.init()
+        self.screen = pygame.display.set_mode(self.size)
+        for _ in range(self.particles_amount):
+            self.create_particle()
+
+    def create_particle(self):
+
+        random.seed(random.randint(-9999999999, 9999999999))
+
+        img_path = random.choice(self.__class__.IMG_ADDRESSES)
+        type = GraphicsFactory.get_template(img_path)
+
+        x = random.randint(50, self.width - 50)
+        y = random.randint(50, self.height - 50)
+        canvas = Rect(x, y, *type.size())
+
+        speed = []
+
+        for _ in range(2):
+            abs_speed = random.randint(1, 9)
+            speed.append(random.choice([-abs_speed, abs_speed]))
+
+        self.particles.add(Graphics(type, canvas, *speed))
+
+    def move(self):
+
+        for particle in self.particles:
+            particle.move()
+            if particle.left < 0 or particle.right > self.width:
+                particle.speed_x = -particle.speed_x
+            if particle.top < 0 or particle.bottom > self.height:
+                particle.speed_y = -particle.speed_y
+
+    def draw(self):
+
+        for particle in self.particles:
+            particle.draw(self.screen)
+        pygame.display.flip()
+
+    def play(self):
+
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    sys.exit()
+
+            self.screen.fill(self.black)
+            self.move()
+            self.draw()
+            time.sleep(0.01)
+
+
+def demo():
+
+    game = Game(1000)
+    game.load()
+    game.play()
+
+
+if __name__ == "__main__":
+    demo()

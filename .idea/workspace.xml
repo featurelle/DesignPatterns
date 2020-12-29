@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="Flyweight first try" />
+    <list default="true" id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="Flyweight first try">
+      <change afterPath="$PROJECT_DIR$/GoF/sctructural/Flyweight/img/green.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoF/behavioral/Chain/Chain.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/behavioral/Chain/ChainOfMath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoF/sctructural/Flyweight/Flyweight.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/sctructural/Flyweight/Flyweight.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,27 +124,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Iterator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DesignPatterns" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/behavioral" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/behavioral/Iterator.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Mediator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DesignPatterns" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,13 +145,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tst" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DesignPatterns" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/sctructural/Flyweight" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/sctructural/Flyweight/tst.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Flyweight (1)" />
+        <item itemvalue="Python.tst" />
         <item itemvalue="Python.Composite" />
         <item itemvalue="Python.Flyweight" />
         <item itemvalue="Python.Mediator" />
-        <item itemvalue="Python.Iterator" />
       </list>
     </recent_temporary>
   </component>
@@ -320,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609269881566</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Flyweight first try">
+      <created>1609269907472</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1609269907472</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -378,51 +390,51 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="555" y="133" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1609192080847" />
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1609269509056">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1609279869524">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608970579026" />
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1609269509056" />
-    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1609269509055">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1609279869524" />
+    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1609279869524">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608970579025" />
-    <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1609269509055" />
-    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1609269509055">
+    <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1609279869524" />
+    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1609279869524">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608970579025" />
-    <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1609269509055" />
-    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1609269509055">
+    <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1609279869524" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1609279869524">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608970579026" />
-    <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1609269509055" />
-    <state width="1579" height="276" key="GridCell.Tab.1.bottom" timestamp="1609268307150">
+    <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1609279869524" />
+    <state width="1579" height="276" key="GridCell.Tab.1.bottom" timestamp="1609271417091">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608379092038" />
-    <state width="1579" height="276" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1609268307150" />
-    <state width="1579" height="276" key="GridCell.Tab.1.center" timestamp="1609268307150">
+    <state width="1579" height="276" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1609271417091" />
+    <state width="1579" height="276" key="GridCell.Tab.1.center" timestamp="1609271417091">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1608379092037" />
-    <state width="1579" height="276" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1609268307150" />
-    <state width="1579" height="276" key="GridCell.Tab.1.left" timestamp="1609268307150">
+    <state width="1579" height="276" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1609271417091" />
+    <state width="1579" height="276" key="GridCell.Tab.1.left" timestamp="1609271417091">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1608379092037" />
-    <state width="1579" height="276" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1609268307150" />
-    <state width="1579" height="276" key="GridCell.Tab.1.right" timestamp="1609268307150">
+    <state width="1579" height="276" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1609271417091" />
+    <state width="1579" height="276" key="GridCell.Tab.1.right" timestamp="1609271417091">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1608379092038" />
-    <state width="1579" height="276" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1609268307150" />
-    <state x="376" y="151" key="Vcs.Push.Dialog.v2" timestamp="1609191307604">
+    <state width="1579" height="276" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1609271417091" />
+    <state x="376" y="151" key="Vcs.Push.Dialog.v2" timestamp="1609269911455">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608970905059" />
-    <state x="376" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1609191307604" />
+    <state x="376" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1609269911455" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608969599936">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
