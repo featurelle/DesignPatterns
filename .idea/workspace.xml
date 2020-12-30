@@ -19,10 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="Comments censored">
+    <list default="true" id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="Changed VeryOldHouseIterator, now it just adapts to parent's constructor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GoF/behavioral/Iterator.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/behavioral/Iterator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoF/behavioral/Mediator.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/behavioral/Mediator.py" afterDir="false" />
     </list>
+    <list id="655eda36-1c66-47fa-8ca3-5399cdf8f600" name="Iterator cosmetics" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +54,7 @@
       <recent name="C:\Users\User\PycharmProjects\DesignPatterns\GoF\behavioral\Visitor" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Iterator">
+  <component name="RunManager" selected="Python.Mediator">
     <configuration name="ChainOfMath" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DesignPatterns" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,8 +162,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Iterator" />
         <item itemvalue="Python.Mediator" />
+        <item itemvalue="Python.Iterator" />
         <item itemvalue="Python.Memento" />
         <item itemvalue="Python.State" />
         <item itemvalue="Python.ChainOfMath" />
@@ -172,6 +174,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="" />
+      <changelist id="655eda36-1c66-47fa-8ca3-5399cdf8f600" name="Iterator cosmetics" comment="" />
       <created>1608365377410</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -359,7 +362,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609322396980</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Iterator cosmetics">
+      <created>1609323272557</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1609323272557</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Changed VeryOldHouseIterator, now it just adapts to parent's constructor">
+      <created>1609323372366</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1609323372366</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -390,7 +407,9 @@
     <MESSAGE value="Cosmetics" />
     <MESSAGE value="Comments updated" />
     <MESSAGE value="Comments censored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comments censored" />
+    <MESSAGE value="Iterator cosmetics" />
+    <MESSAGE value="Changed VeryOldHouseIterator, now it just adapts to parent's constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed VeryOldHouseIterator, now it just adapts to parent's constructor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="90" key="#Inspections" timestamp="1608365728322">
@@ -409,22 +428,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="611" y="302" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.0.1536.824@0.0.1536.824" timestamp="1608379325900" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1609322946298">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1609331143035">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609322946298" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1609322946297">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609331143035" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1609331143034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609322946297" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1609322946297">
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609331143034" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1609331143034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609322946297" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1609322946297">
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609331143034" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1609331143035">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609322946297" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609331143035" />
     <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1609320197084">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -449,6 +468,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="173" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1609145288368" />
+    <state x="618" y="325" key="VCS.ChangelistChooser" timestamp="1609323293665">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="618" y="325" key="VCS.ChangelistChooser/0.0.1536.824@0.0.1536.824" timestamp="1609323293665" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609322399710">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

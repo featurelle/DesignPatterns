@@ -1,8 +1,9 @@
 from __future__ import annotations
 import random
+from functools import singledispatchmethod
 from string import ascii_lowercase, ascii_uppercase, digits
 
-chars = ascii_lowercase + ascii_uppercase + digits
+CHARS = ascii_lowercase + ascii_uppercase + digits
 
 
 class Mediator:
@@ -41,6 +42,21 @@ class User:
         self._mediator = mediator
 
 
+class Admin(User):
+
+    type = 'Admin'
+
+
+class RegularUser(User):
+
+    type = 'User'
+
+
+class HiddenUser(User):
+
+    type = 'Hidden'
+
+
 class Chat(Mediator):
 
     def __init__(self, name: str):
@@ -61,45 +77,29 @@ class Chat(Mediator):
         hidden.mediator(self)
         self._hidden.append(hidden)
 
+    # Наконец-то разобрался, как тут диспетчеризацию делать на кастомных классах
+    @singledispatchmethod
     def show_users(self, user: User):
-        if type(user) == RegularUser:
-            return self._users + self._admins
-        else:
-            return self._users + self._admins + self._hidden
+        return self._users + self._admins + self._hidden
 
+    @show_users.register(RegularUser)
+    def _(self, user: RegularUser):
+        return self._users + self._admins
+
+    @singledispatchmethod
     def notify(self, user: User, message: str):
-        if type(user) == RegularUser or type(user) == Admin:
-            self.to_all(user, message)
-        elif type(user) == HiddenUser:
-            self.to_hidden(user, message)
-
-    def to_all(self, user: User, message: str):
         for each in self._users + self._admins + self._hidden:
             each.receive_message(user.name, message)
 
-    def to_hidden(self, user: User, message: str):
+    @notify.register(HiddenUser)
+    def _(self, user: HiddenUser, message: str):
         for each in self._admins + self._hidden:
             each.receive_message(user.name, message)
 
 
-class Admin(User):
-
-    type = 'Admin'
-
-
-class RegularUser(User):
-
-    type = 'User'
-
-
-class HiddenUser(User):
-
-    type = 'Hidden'
-
-
 def random_name():
     length = random.randint(5, 12)
-    name = ''.join(random.choice(chars) for _ in range(length))
+    name = ''.join(random.choice(CHARS) for _ in range(length))
     return name
 
 
