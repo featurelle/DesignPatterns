@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="Cosmetics">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Garbage/Chain_ATM.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/behavioral/Chain/Chain_ATM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoF/creational/Prototype.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/creational/Prototype.py" afterDir="false" />
-    </list>
+    <list default="true" id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="Restored from Garbage, because it's nice code in my opinion" />
     <list id="655eda36-1c66-47fa-8ca3-5399cdf8f600" name="Iterator cosmetics" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -390,7 +386,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609331260048</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="renamed 'add_shape' method to 'save'">
+      <created>1609334455020</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1609334455020</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Restored from Garbage, because it's nice code in my opinion">
+      <created>1609334481425</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1609334481425</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -424,7 +434,9 @@
     <MESSAGE value="Changed VeryOldHouseIterator, now it just adapts to parent's constructor" />
     <MESSAGE value="Dispatching instead of if else clauses in Chat class" />
     <MESSAGE value="Cosmetics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cosmetics" />
+    <MESSAGE value="renamed 'add_shape' method to 'save'" />
+    <MESSAGE value="Restored from Garbage, because it's nice code in my opinion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restored from Garbage, because it's nice code in my opinion" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="90" key="#Inspections" timestamp="1608365728322">

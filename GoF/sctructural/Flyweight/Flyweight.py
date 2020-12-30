@@ -20,7 +20,7 @@ class GraphicsType:
     def draw(self, screen, canvas: Rect):
         screen.blit(self.img, canvas)
 
-
+#hello
 class Graphics:
 
     def __init__(self, type: GraphicsType, canvas: Rect, speed_x: int, speed_y: int):
