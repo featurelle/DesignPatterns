@@ -74,7 +74,7 @@ class Game:
         self.size = self.width, self.height = 1600, 900
         self.screen = None
         self.black = 0, 0, 0
-
+    # hello world
     def load(self):
 
         pygame.init()
