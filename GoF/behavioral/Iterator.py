@@ -92,7 +92,6 @@ class SimpleWindowListIterator(Iterator):
             return False
 
 
-# Шаблон
 class RecursiveWindowListIterator(Iterator):
 
     def __init__(self, seq: list):
@@ -116,11 +115,11 @@ class RecursiveWindowListIterator(Iterator):
             return False
 
 
+# А это адаптер, по большому счету
 class VeryOldHouseIterator(RecursiveWindowListIterator):
 
     def __init__(self, seq: dict):
-        self.current = 0
-        self.floors = [SimpleWindowListIterator(i) for i in seq.values()]
+        super().__init__(list(seq.values()))
 
 
 def calc_expenses(house):
