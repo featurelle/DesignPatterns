@@ -19,10 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="Changed VeryOldHouseIterator, now it just adapts to parent's constructor">
+    <list default="true" id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="Cosmetics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoF/behavioral/Iterator.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/behavioral/Iterator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoF/behavioral/Mediator.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/behavioral/Mediator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Garbage/Chain_ATM.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/behavioral/Chain/Chain_ATM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoF/creational/Prototype.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/creational/Prototype.py" afterDir="false" />
     </list>
     <list id="655eda36-1c66-47fa-8ca3-5399cdf8f600" name="Iterator cosmetics" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,8 +54,8 @@
       <recent name="C:\Users\User\PycharmProjects\DesignPatterns\GoF\behavioral\Visitor" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Mediator">
-    <configuration name="ChainOfMath" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Prototype">
+    <configuration name="Chain_ATM (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DesignPatterns" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -67,7 +67,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/behavioral/Chain/ChainOfMath.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/behavioral/Chain/Chain_ATM.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -76,7 +76,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Iterator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Command" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DesignPatterns" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -88,7 +88,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/behavioral/Iterator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/behavioral/Command.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -97,7 +97,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Mediator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Prototype" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DesignPatterns" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -105,11 +105,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/behavioral" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/creational" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/behavioral/Mediator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/creational/Prototype.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,7 +118,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Memento" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Singleton" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DesignPatterns" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -126,11 +126,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/behavioral" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/creational" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/behavioral/Memento.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/creational/Singleton.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -139,7 +139,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="State" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Visitor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DesignPatterns" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -147,11 +147,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/behavioral" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/behavioral/Visitor" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/behavioral/State.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/behavioral/Visitor/Visitor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -162,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Mediator" />
-        <item itemvalue="Python.Iterator" />
-        <item itemvalue="Python.Memento" />
-        <item itemvalue="Python.State" />
-        <item itemvalue="Python.ChainOfMath" />
+        <item itemvalue="Python.Prototype" />
+        <item itemvalue="Python.Singleton" />
+        <item itemvalue="Python.Command" />
+        <item itemvalue="Python.Visitor" />
+        <item itemvalue="Python.Chain_ATM (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -376,7 +376,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609323372366</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Dispatching instead of if else clauses in Chat class">
+      <created>1609331248435</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1609331248435</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Cosmetics">
+      <created>1609331260048</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1609331260048</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -404,12 +418,13 @@
     <MESSAGE value="Math parser with chain completed!" />
     <MESSAGE value="Decomposed big parser' classes and refactored them into one base that uses different small strategies (or commands)" />
     <MESSAGE value="New Chain example on ATM" />
-    <MESSAGE value="Cosmetics" />
     <MESSAGE value="Comments updated" />
     <MESSAGE value="Comments censored" />
     <MESSAGE value="Iterator cosmetics" />
     <MESSAGE value="Changed VeryOldHouseIterator, now it just adapts to parent's constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed VeryOldHouseIterator, now it just adapts to parent's constructor" />
+    <MESSAGE value="Dispatching instead of if else clauses in Chat class" />
+    <MESSAGE value="Cosmetics" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cosmetics" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="90" key="#Inspections" timestamp="1608365728322">
@@ -428,22 +443,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="611" y="302" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.0.1536.824@0.0.1536.824" timestamp="1608379325900" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1609331143035">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1609334354244">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609331143035" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1609331143034">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609334354244" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1609334354243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609331143034" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1609331143034">
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609334354243" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1609334354243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609331143034" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1609331143035">
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609334354243" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1609334354243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609331143035" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609334354243" />
     <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1609320197084">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -472,10 +487,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="618" y="325" key="VCS.ChangelistChooser/0.0.1536.824@0.0.1536.824" timestamp="1609323293665" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609322399710">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609331263650">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609322399710" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609331263650" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609315867203">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

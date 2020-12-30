@@ -75,7 +75,7 @@ class ShapesRegister:
         self.__items['big_brush'] = Brush(Fore.BLACK, 30)
         self.__items['composite_shape'] = Stencil(list(self.__items.values()))
 
-    def add_shape(self, shape: Shape, name: str):
+    def save(self, shape: Shape, name: str):
         self.__items[name] = shape.clone()
 
     def search_shape(self, name: str):
@@ -98,7 +98,7 @@ def demo():
     brush.color(Fore.GREEN)
     brush.draw()
     print()
-    saved.add_shape(brush, 'my_brush')
+    saved.save(brush, 'my_brush')
 
     com = saved.search_shape('composite_shape')
     com.draw()
@@ -109,10 +109,10 @@ def demo():
     com.draw()
     print()
 
-    saved.add_shape(com, 'my_composite')
+    saved.save(com, 'my_composite')
     com.color(Fore.BLUE)
     com.draw()
-    saved.add_shape(com, 'blue_composite')
+    saved.save(com, 'blue_composite')
 
 
 if __name__ == '__main__':
