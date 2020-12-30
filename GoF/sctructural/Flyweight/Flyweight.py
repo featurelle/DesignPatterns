@@ -75,8 +75,8 @@ class Game:
         self.screen = None
         self.black = 0, 0, 0
 
+    # hello world
     def load(self):
-
         pygame.init()
         self.screen = pygame.display.set_mode(self.size)
         for _ in range(self.particles_amount):

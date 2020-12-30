@@ -13,6 +13,56 @@ class FileSystem:
         raise NotImplementedError
 
 
+# class Management(FileSystem):
+#
+#     def __init__(self, dir: Directory):
+#         self.dir = dir
+#
+#     def create_folder(self, name: str):
+#         new_folder = Directory(self.dir, name)
+#         self.dir.leaves.append(new_folder)
+#         return new_folder
+#
+#     def create_file(self, name: str):
+#         new_file = File(self.dir, name, str())
+#         self.dir.leaves.append(new_file)
+#         return new_file
+#
+#     def add(self, leaf: FileSystem):
+#         self.dir.leaves.append(leaf)
+#
+#     def show(self, indent=0) -> str:
+#         indentation = '----' * indent
+#         string = indentation + self.dir.name + '\n'
+#         for leaf in self.dir.leaves:
+#             if leaf.visible:
+#                 string += indentation + leaf.show(indent + 1) + '\n'
+#         return string
+#
+#     def size(self) -> int:
+#         total = 0
+#         for leaf in self.dir.leaves:
+#             total += leaf.size()
+#         return total
+#
+#     def delete(self, leaf: FileSystem):
+#         try:
+#             self.dir.leaves.remove(leaf)
+#         except ValueError:
+#             print('Cannot delete non-existing leaf')
+#
+#     def full_path(self):
+#         raise NotImplementedError
+#
+#
+# class Moveable:
+#
+#     def move(self, directory: Directory):
+#         directory.add(self)
+#         self.root.delete(self)
+#         self.root = directory
+
+
 class Directory(FileSystem):
 
     def __init__(self, root: Directory, name: str, visible: bool = True):
