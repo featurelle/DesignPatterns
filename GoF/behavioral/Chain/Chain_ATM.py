@@ -37,7 +37,7 @@ class ATMProxyGuard:
             self.__atm.cash_out(amount)
 
 
-# Ну прям абстрактная фабрика
+# Ну прям фабрика
 class Software:
 
     def create_handlers(self, modules: List[Module]):
