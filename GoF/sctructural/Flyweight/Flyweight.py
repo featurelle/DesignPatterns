@@ -124,11 +124,14 @@ class Game:
             self.screen.fill(self.black)
             self.move()
             self.draw()
-            time.sleep(0.01)
+            time.sleep(0.005)
 
 
 def demo():
 
+    print('Every picture consumes ~1.8 kb on average,\n'
+          'So if we weren\'t using Flyweight, a thousand particles would be consuming about 1.8 MB of memory.\n'
+          'But instead we have the difference between 1 and 1000 particles at most 100 kb - 18 times cheaper!')
     game = Game(1000)
     game.load()
     game.play()
