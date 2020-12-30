@@ -17,7 +17,7 @@ class Monster(ABC):
 class GiantBat(Monster):
 
     def attack(self):
-        print(self.skin + 'Bat' + Fore.RESET + ' is flying around and throws acid at you')
+        print(self.skin + 'Bat' + Fore.RESET + ' is flying around and throws acid at you.')
 
 
 class GiantBear(Monster):

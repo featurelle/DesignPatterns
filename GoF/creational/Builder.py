@@ -171,23 +171,23 @@ class ComputerGUI:
 
 def client():
     init()
-    ph_b = AppFrameBuilderPhone()
-    pc_b = AppFrameBuilderPC()
-    d = Director(ph_b)
+    phone_builder = AppFrameBuilderPhone()
+    pc_builder = AppFrameBuilderPC()
+    d = Director(phone_builder)
 
     d.make_low_requirements_gui()
-    ph_b.fit_notch()
-    app1 = ph_b.result()
+    phone_builder.fit_notch()
+    app1 = phone_builder.result()
     app1.demo()
 
     d.make_full_app_gui()
-    app2 = ph_b.result()
+    app2 = phone_builder.result()
     app2.demo()
 
-    d.builder = pc_b
+    d.builder = pc_builder
     d.make_full_app_gui()
-    pc_b.create_hotkeys()
-    app3 = pc_b.result()
+    pc_builder.create_hotkeys()
+    app3 = pc_builder.result()
     app3.show()
 
 

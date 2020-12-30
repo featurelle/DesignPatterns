@@ -19,10 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="Cosmetics">
+    <list default="true" id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="test commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Garbage/Chain_ATM.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/behavioral/Chain/Chain_ATM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoF/creational/Prototype.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/creational/Prototype.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoF/behavioral/Mediator.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/behavioral/Mediator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoF/creational/Builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/creational/Builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoF/creational/FactoryMethod.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/creational/FactoryMethod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoF/sctructural/Composite/Composite.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/sctructural/Composite/Composite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoF/sctructural/Flyweight/Flyweight.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/sctructural/Flyweight/Flyweight.py" afterDir="false" />
     </list>
     <list id="655eda36-1c66-47fa-8ca3-5399cdf8f600" name="Iterator cosmetics" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,50 +57,8 @@
       <recent name="C:\Users\User\PycharmProjects\DesignPatterns\GoF\behavioral\Visitor" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Prototype">
-    <configuration name="Chain_ATM (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DesignPatterns" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/behavioral/Chain" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/behavioral/Chain/Chain_ATM.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Command" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DesignPatterns" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/behavioral" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/behavioral/Command.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Prototype" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Flyweight">
+    <configuration name="AbstractFactory" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DesignPatterns" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -109,7 +70,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/creational/Prototype.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/creational/AbstractFactory.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -118,7 +79,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Singleton" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Builder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DesignPatterns" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -130,7 +91,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/creational/Singleton.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/creational/Builder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -139,7 +100,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Visitor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Composite" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DesignPatterns" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -147,11 +108,53 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/behavioral/Visitor" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/sctructural/Composite" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/behavioral/Visitor/Visitor.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/sctructural/Composite/Composite.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FactoryMethod" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DesignPatterns" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/creational" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/creational/FactoryMethod.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flyweight" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DesignPatterns" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/sctructural/Flyweight" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/sctructural/Flyweight/Flyweight.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -162,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Prototype" />
-        <item itemvalue="Python.Singleton" />
-        <item itemvalue="Python.Command" />
-        <item itemvalue="Python.Visitor" />
-        <item itemvalue="Python.Chain_ATM (1)" />
+        <item itemvalue="Python.Flyweight" />
+        <item itemvalue="Python.Builder" />
+        <item itemvalue="Python.AbstractFactory" />
+        <item itemvalue="Python.FactoryMethod" />
+        <item itemvalue="Python.Composite" />
       </list>
     </recent_temporary>
   </component>
@@ -424,7 +427,8 @@
     <MESSAGE value="Changed VeryOldHouseIterator, now it just adapts to parent's constructor" />
     <MESSAGE value="Dispatching instead of if else clauses in Chat class" />
     <MESSAGE value="Cosmetics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cosmetics" />
+    <MESSAGE value="test commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="90" key="#Inspections" timestamp="1608365728322">
@@ -443,38 +447,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="611" y="302" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.0.1536.824@0.0.1536.824" timestamp="1608379325900" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1609334354244">
+    <state width="1515" height="261" key="GridCell.Tab.0.bottom" timestamp="1609340206829">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609334354244" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1609334354243">
+    <state width="1515" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609340206829" />
+    <state width="1515" height="261" key="GridCell.Tab.0.center" timestamp="1609340206829">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609334354243" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1609334354243">
+    <state width="1515" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609340206829" />
+    <state width="1515" height="261" key="GridCell.Tab.0.left" timestamp="1609340206829">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609334354243" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1609334354243">
+    <state width="1515" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609340206829" />
+    <state width="1515" height="261" key="GridCell.Tab.0.right" timestamp="1609340206829">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609334354243" />
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1609320197084">
+    <state width="1515" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609340206829" />
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1609340206830">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609320197084" />
-    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1609320197084">
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609340206830" />
+    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1609340206829">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1609320197084" />
-    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1609320197084">
+    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1609340206829" />
+    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1609340206829">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1609320197084" />
-    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1609320197084">
+    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1609340206829" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1609340206830">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1609320197084" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1609340206830" />
     <state x="147" y="64" key="MergeDialog" timestamp="1609315841121">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -507,6 +511,16 @@
           <url>file://$PROJECT_DIR$/GoF/creational/Singleton.py</url>
           <line>85</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/GoF/sctructural/Flyweight/Flyweight.py</url>
+          <line>138</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/GoF/sctructural/Flyweight/Flyweight.py</url>
+          <line>101</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
