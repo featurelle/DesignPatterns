@@ -19,19 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="Restored from Garbage, because it's nice code in my opinion" />
-=======
-    <list default="true" id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="test commit">
+    <list default="true" id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="Flyweight!!! Its alive!">
+      <change beforePath="$PROJECT_DIR$/.idea/DesignPatterns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DesignPatterns.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoF/behavioral/Mediator.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/behavioral/Mediator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoF/creational/Builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/creational/Builder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoF/creational/FactoryMethod.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/creational/FactoryMethod.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoF/sctructural/Composite/Composite.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/sctructural/Composite/Composite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoF/sctructural/Flyweight/Flyweight.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/sctructural/Flyweight/Flyweight.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Garbage/tst.py" beforeDir="false" afterPath="$PROJECT_DIR$/Garbage/tst.py" afterDir="false" />
     </list>
->>>>>>> tmp
-    <list id="655eda36-1c66-47fa-8ca3-5399cdf8f600" name="Iterator cosmetics" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,56 +47,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/GoF/sctructural/Flyweight" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\DesignPatterns\GoF\sctructural\Flyweight" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\PycharmProjects\DesignPatterns\GoF\behavioral\Chain" />
+      <recent name="C:\Users\User\PycharmProjects\DesignPatterns\GoF\sctructural\Flyweight\img" />
+      <recent name="C:\Users\User\PycharmProjects\DesignPatterns\Garbage" />
+      <recent name="C:\Users\User\PycharmProjects\DesignPatterns\GoF\sctructural\Flyweight" />
       <recent name="C:\Users\User\PycharmProjects\DesignPatterns\GoF\behavioral\Visitor" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Flyweight">
-    <configuration name="AbstractFactory" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DesignPatterns" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/creational" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/creational/AbstractFactory.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Builder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DesignPatterns" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/creational" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/creational/Builder.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.Flyweight (1)">
     <configuration name="Composite" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DesignPatterns" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -125,28 +83,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="FactoryMethod" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DesignPatterns" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/creational" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/creational/FactoryMethod.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Flyweight" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Flyweight (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DesignPatterns" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -167,13 +104,76 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Flyweight" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DesignPatterns" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/sctructural/Flyweight" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\User\PycharmProjects\DesignPatterns\Garbage\Flyweight.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Mediator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DesignPatterns" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/behavioral" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/behavioral/Mediator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tst" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DesignPatterns" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoF/sctructural/Flyweight" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoF/sctructural/Flyweight/tst.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Flyweight" />
-        <item itemvalue="Python.Builder" />
-        <item itemvalue="Python.AbstractFactory" />
-        <item itemvalue="Python.FactoryMethod" />
+        <item itemvalue="Python.Flyweight (1)" />
         <item itemvalue="Python.Composite" />
+        <item itemvalue="Python.tst" />
+        <item itemvalue="Python.Flyweight" />
+        <item itemvalue="Python.Mediator" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +181,6 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="" />
-      <changelist id="655eda36-1c66-47fa-8ca3-5399cdf8f600" name="Iterator cosmetics" comment="" />
       <created>1608365377410</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -292,126 +291,56 @@
       <option name="project" value="LOCAL" />
       <updated>1608972696689</updated>
     </task>
-    <task id="LOCAL-00016" summary="technincal commit">
-      <created>1609145249307</created>
+    <task id="LOCAL-00016" summary="New proxy, refactored Chain, now it goes in 3 different versions, the previous one moved to Garbage.">
+      <created>1609187440117</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1609145249307</updated>
+      <updated>1609187440117</updated>
     </task>
-    <task id="LOCAL-00017" summary="Chain now works! It's alive!">
-      <created>1609147868418</created>
+    <task id="LOCAL-00017" summary="Mediator is almost done">
+      <created>1609189615863</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1609147868419</updated>
+      <updated>1609189615863</updated>
     </task>
-    <task id="LOCAL-00018" summary="Chain now works! It's alive!">
-      <created>1609150288817</created>
+    <task id="LOCAL-00018" summary="Flyweight first try">
+      <created>1609191304209</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1609150288817</updated>
+      <updated>1609191304209</updated>
     </task>
-    <task id="LOCAL-00019" summary="Math parser with chain completed!">
-      <created>1609156752056</created>
+    <task id="LOCAL-00019" summary="Flyweight first try">
+      <created>1609269862225</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1609156752056</updated>
+      <updated>1609269862225</updated>
     </task>
-    <task id="LOCAL-00020" summary="Math parser with chain completed!">
-      <created>1609156941733</created>
+    <task id="LOCAL-00020" summary="Flyweight first try">
+      <created>1609269881566</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1609156941733</updated>
+      <updated>1609269881566</updated>
     </task>
-    <task id="LOCAL-00021" summary="Decomposed big parser' classes and refactored them into one base that uses different small strategies (or commands)">
-      <created>1609162296255</created>
+    <task id="LOCAL-00021" summary="Flyweight first try">
+      <created>1609269907472</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1609162296255</updated>
+      <updated>1609269907472</updated>
     </task>
-    <task id="LOCAL-00022" summary="New Chain example on ATM">
-      <created>1609178023316</created>
+    <task id="LOCAL-00022" summary="Flyweight!!! Its alive!">
+      <created>1609280010992</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1609178023316</updated>
+      <updated>1609280010992</updated>
     </task>
-    <task id="LOCAL-00023" summary="New Chain example on ATM">
-      <created>1609319976620</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1609319976620</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Cosmetics">
-      <created>1609321433227</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1609321433227</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Comments updated">
-      <created>1609321944682</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1609321944682</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Comments censored">
-      <created>1609322396980</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1609322396980</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Iterator cosmetics">
-      <created>1609323272557</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1609323272557</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Changed VeryOldHouseIterator, now it just adapts to parent's constructor">
-      <created>1609323372366</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1609323372366</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Dispatching instead of if else clauses in Chat class">
-      <created>1609331248435</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1609331248435</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Cosmetics">
-      <created>1609331260048</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1609331260048</updated>
-    </task>
-    <task id="LOCAL-00031" summary="renamed 'add_shape' method to 'save'">
-      <created>1609334455020</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1609334455020</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Restored from Garbage, because it's nice code in my opinion">
-      <created>1609334481425</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1609334481425</updated>
-    </task>
-    <option name="localTasksCounter" value="33" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,99 +363,105 @@
     <MESSAGE value="Iterator's client demo extended + new comments" />
     <MESSAGE value="new comments in todo section &gt;&gt; Iterator.py" />
     <MESSAGE value="Updated Command.py, but not finished, now it is a draft" />
-    <MESSAGE value="technincal commit" />
-    <MESSAGE value="Chain now works! It's alive!" />
-    <MESSAGE value="Math parser with chain completed!" />
-    <MESSAGE value="Decomposed big parser' classes and refactored them into one base that uses different small strategies (or commands)" />
-    <MESSAGE value="New Chain example on ATM" />
-    <MESSAGE value="Comments updated" />
-    <MESSAGE value="Comments censored" />
-    <MESSAGE value="Iterator cosmetics" />
-    <MESSAGE value="Changed VeryOldHouseIterator, now it just adapts to parent's constructor" />
-    <MESSAGE value="Dispatching instead of if else clauses in Chat class" />
-    <MESSAGE value="Cosmetics" />
-<<<<<<< HEAD
-    <MESSAGE value="renamed 'add_shape' method to 'save'" />
-    <MESSAGE value="Restored from Garbage, because it's nice code in my opinion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restored from Garbage, because it's nice code in my opinion" />
-=======
-    <MESSAGE value="test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
->>>>>>> tmp
+    <MESSAGE value="New proxy, refactored Chain, now it goes in 3 different versions, the previous one moved to Garbage." />
+    <MESSAGE value="Mediator is almost done" />
+    <MESSAGE value="Flyweight first try" />
+    <MESSAGE value="Flyweight!!! Its alive!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flyweight!!! Its alive!" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="239" key="#Images" timestamp="1609268959290">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="552" y="239" key="#Images/0.0.1600.860@0.0.1600.860" timestamp="1609268959290" />
     <state x="395" y="90" key="#Inspections" timestamp="1608365728322">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="395" y="90" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1608365728322" />
-    <state x="508" y="236" key="#Notifications" timestamp="1609145157278">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="598" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1609191019645">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="508" y="236" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1609145157278" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1609173103674">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1608971493956" />
+    <state x="598" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1609191019645" />
+    <state x="529" y="220" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1609191731415">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1609173103674" />
+    <state x="529" y="220" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1600.860@0.0.1600.860" timestamp="1609191731415" />
+    <state x="438" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1609185752170">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="438" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1609185752170" />
     <state x="611" y="302" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1608379325900">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="611" y="302" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.0.1536.824@0.0.1536.824" timestamp="1608379325900" />
-    <state width="1515" height="261" key="GridCell.Tab.0.bottom" timestamp="1609340206829">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="555" y="133" key="#xdebugger.evaluate" timestamp="1609192080847">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609340206829" />
-    <state width="1515" height="261" key="GridCell.Tab.0.center" timestamp="1609340206829">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="555" y="133" key="#xdebugger.evaluate/0.0.1600.860@0.0.1600.860" timestamp="1609192080847" />
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1609356084204">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609340206829" />
-    <state width="1515" height="261" key="GridCell.Tab.0.left" timestamp="1609340206829">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608970579026" />
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1609356084204" />
+    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1609356084204">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609340206829" />
-    <state width="1515" height="261" key="GridCell.Tab.0.right" timestamp="1609340206829">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608970579025" />
+    <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1609356084204" />
+    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1609356084204">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609340206829" />
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1609340206830">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608970579025" />
+    <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1609356084204" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1609356084204">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609340206830" />
-    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1609340206829">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608970579026" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1609356084204" />
+    <state width="1579" height="276" key="GridCell.Tab.1.bottom" timestamp="1609271417091">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1609340206829" />
-    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1609340206829">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608379092038" />
+    <state width="1579" height="276" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1609271417091" />
+    <state width="1579" height="276" key="GridCell.Tab.1.center" timestamp="1609271417091">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1609340206829" />
-    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1609340206830">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1608379092037" />
+    <state width="1579" height="276" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1609271417091" />
+    <state width="1579" height="276" key="GridCell.Tab.1.left" timestamp="1609271417091">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1609340206830" />
-    <state x="147" y="64" key="MergeDialog" timestamp="1609315841121">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1608379092037" />
+    <state width="1579" height="276" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1609271417091" />
+    <state width="1579" height="276" key="GridCell.Tab.1.right" timestamp="1609271417091">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="147" y="64" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1609315841121" />
-    <state x="407" y="173" key="MultipleFileMergeDialog" timestamp="1609145288368">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1608379092038" />
+    <state width="1579" height="276" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1609271417091" />
+    <state x="152" y="68" key="MergeDialog" timestamp="1609355952724">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="407" y="173" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1609145288368" />
-    <state x="618" y="325" key="VCS.ChangelistChooser" timestamp="1609323293665">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="152" y="68" key="MergeDialog/0.0.1600.860@0.0.1600.860" timestamp="1609355952724" />
+    <state x="301" y="75" key="SettingsEditor" timestamp="1609355978780">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="618" y="325" key="VCS.ChangelistChooser/0.0.1536.824@0.0.1536.824" timestamp="1609323293665" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609331263650">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="301" y="75" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1609355978780" />
+    <state x="376" y="151" key="Vcs.Push.Dialog.v2" timestamp="1609280544165">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609331263650" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609315867203">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608970905059" />
+    <state x="376" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1609280544165" />
+    <state x="610" y="340" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609355929720">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1609315867203" />
-    <state x="331" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1608378088737">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1608969599936" />
+    <state x="610" y="340" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1609355929720" />
+    <state x="345" y="147" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1609192023464">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="331" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1608378088737" />
+    <state x="345" y="147" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1600.860@0.0.1600.860" timestamp="1609192023464" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -537,14 +472,9 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/GoF/sctructural/Flyweight/Flyweight.py</url>
-          <line>138</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/GoF/sctructural/Flyweight/Flyweight.py</url>
-          <line>101</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/GoF/sctructural/Composite/Composite.py</url>
+          <line>208</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
