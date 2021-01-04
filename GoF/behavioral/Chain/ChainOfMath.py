@@ -28,10 +28,10 @@ class BracketsParser(MathParser):
             modified = math.replace('(' + match + ')', str(result))
             return self.parse(modified)    # Вот здесь рекурсия
         else:
-            return float(self.then.parse(math))    # Вот здесь выход из рекурсии
+            return float(self.then.parse(math))    # Вот здесь выход из рекурсии // Скобок больше нет
 
 
-# Привет паттернам Команда/Стратегия и принципу Dependency Injection
+# Привет паттернам Команда/Шаблон и принципу Dependency Injection
 class Arithmetics:
 
     @property
