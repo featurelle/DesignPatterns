@@ -57,7 +57,7 @@ class TaxMan(Observer):
     def update(self, employee, salary):
         print(f'TaxMan: Send {employee.name} a new tax bill!\n')
 
-
+# hello
 def promote_employee():
     e = Employee('John Doe', 12000)
     p = Payroll()
