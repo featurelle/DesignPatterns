@@ -26,7 +26,7 @@ class LogDecorated(Observer):
         print(*self.__changes, sep='\n', end=ending_line)
 
     def update(self, source, change):
-        self.__changes.append(f'At {source.name}: {change}.')
+        self.__changes.append(f'At {source.noname}: {change}.')
 
 
 class Singleton:
@@ -54,7 +54,7 @@ class Log(Observer, Singleton):
         print(*self.__changes, sep='\n', end=ending_line)
 
     def update(self, source, change):
-        self.__changes.append(f'At {source.name}: {change}.')
+        self.__changes.append(f'At {source.noname}: {change}.')
 
 
 class SomeClass(Observable):

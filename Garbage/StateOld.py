@@ -11,7 +11,7 @@ W
 
         if self.pos == len(self.stations):
             self.pos = 0
-        print("Visiting... Station is {} {}".format(self.stations[self.pos], self.name))
+        print("Visiting... Station is {} {}".format(self.stations[self.pos], self.noname))
 
 
 class AmState(State):

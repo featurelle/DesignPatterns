@@ -48,14 +48,14 @@ class Employee(Observable):
 class Payroll(Observer):
 
     def update(self, employee, salary):
-        print(f'Payroll: Cut a new check for {employee.name}!\n'
+        print(f'Payroll: Cut a new check for {employee.noname}!\n'
               f'Her/his/its new salary is {salary}!\n')
 
 
 class TaxMan(Observer):
 
     def update(self, employee, salary):
-        print(f'TaxMan: Send {employee.name} a new tax bill!\n')
+        print(f'TaxMan: Send {employee.noname} a new tax bill!\n')
 
 
 def promote_employee():

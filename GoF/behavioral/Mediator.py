@@ -36,7 +36,7 @@ class User:
 
     def who_i_see(self):
         print('\n\n>>>>' + self.name + '\'s ' + f'({self.type})' + ' visible users:')
-        print(*(user.name for user in self._mediator.show_users(self)), sep='\n')
+        print(*(user.noname for user in self._mediator.show_users(self)), sep='\n')
 
     def mediator(self, mediator: Mediator):
         self._mediator = mediator
