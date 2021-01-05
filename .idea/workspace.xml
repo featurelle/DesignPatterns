@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="Chain cosmetics">
-      <change afterPath="$PROJECT_DIR$/Garbage/OOP/Monostate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Garbage/OOP/Properties.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Garbage/StateOld.py" beforeDir="false" afterPath="$PROJECT_DIR$/Garbage/StateOld.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoF/behavioral/Mediator.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/behavioral/Mediator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoF/behavioral/Observer.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/behavioral/Observer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GoF/creational/Singleton.py" beforeDir="false" afterPath="$PROJECT_DIR$/GoF/creational/Singleton.py" afterDir="false" />
-    </list>
+    <list default="true" id="08e150f0-e358-4952-8f9d-7ec0275ffd5c" name="Default Changelist" comment="Chain cosmetics" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
