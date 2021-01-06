@@ -52,6 +52,7 @@ class MySkinRandomMonsterFactory(ABC):
         return random.choice(possible)(*pos, skin)
 
 # test comment
+# test comment 2
 def demo():
 
     init()
