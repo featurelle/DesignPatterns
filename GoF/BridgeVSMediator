@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2021-01-12T20:56:32.865Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="HI8JFF5I3YrP57u42gt0" version="14.1.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-12T20:57:36.943Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="W5d4OW-ZznCLZjxbtp1W" version="14.1.9" type="github">
   <diagram id="wwnc8NBhW2ITc4LAI9TB" name="Page-1">
     <mxGraphModel dx="1102" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="XmwOyZjwYUksLEpxh4fr-1" value="Mediator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="230" y="110" width="160" height="86" as="geometry" />
+          <mxGeometry x="280" y="190" width="160" height="86" as="geometry" />
         </mxCell>
         <mxCell id="XmwOyZjwYUksLEpxh4fr-2" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="XmwOyZjwYUksLEpxh4fr-1">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
@@ -16,8 +16,11 @@
         <mxCell id="XmwOyZjwYUksLEpxh4fr-4" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="XmwOyZjwYUksLEpxh4fr-1">
           <mxGeometry y="60" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="XmwOyZjwYUksLEpxh4fr-5" value="&lt;font style=&quot;font-size: 14px&quot;&gt;GoF: &quot;Паттерн Посредник инкапсулирует взаимодействия между компонентами,&lt;br&gt;упраздняя прямые ссылки друг на друга.&lt;br&gt;Посредник позволяет менять взаимодействия между классами,&lt;br&gt;не изменяя сами классы&quot;.&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="10" y="10" width="540" height="70" as="geometry" />
+        <mxCell id="XmwOyZjwYUksLEpxh4fr-5" value="&lt;font style=&quot;font-size: 14px&quot;&gt;&quot;Посредник инкапсулирует взаимодействия между компонентами,&lt;br&gt;упраздняя прямые ссылки друг на друга.&lt;br&gt;Посредник позволяет менять взаимодействия между классами,&lt;br&gt;не изменяя сами классы&quot;.&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="40" width="450" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="XmwOyZjwYUksLEpxh4fr-6" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px&quot;&gt;MEDIATOR&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="120" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
