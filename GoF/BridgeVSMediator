@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-12T20:59:59.834Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="CkBllefQkX-TdS0ZUjDb" version="14.1.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-12T21:00:28.062Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="PUFobuzkXiBZZwPDqp6d" version="14.1.9" type="github">
   <diagram id="wwnc8NBhW2ITc4LAI9TB" name="Page-1">
     <mxGraphModel dx="1102" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -16,8 +16,8 @@
         <mxCell id="XmwOyZjwYUksLEpxh4fr-4" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="XmwOyZjwYUksLEpxh4fr-1">
           <mxGeometry y="60" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="XmwOyZjwYUksLEpxh4fr-5" value="&lt;font style=&quot;font-size: 14px&quot;&gt;&quot;Посредник инкапсулирует схему&lt;br&gt;взаимодействия между компонентами,&lt;br&gt;упраздняя прямые ссылки друг на друга.&lt;br&gt;Посредник позволяет изменять&lt;br&gt;взаимодействия между компонентами,&lt;br&gt;не изменяя сами компоненты&quot;.&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="130" y="25" width="280" height="100" as="geometry" />
+        <mxCell id="XmwOyZjwYUksLEpxh4fr-5" value="&lt;font style=&quot;font-size: 14px&quot;&gt;&quot;Посредник инкапсулирует схему&lt;br&gt;&lt;b&gt;взаимодействия между компонентами&lt;/b&gt;,&lt;br&gt;упраздняя прямые ссылки друг на друга.&lt;br&gt;Посредник позволяет изменять&lt;br&gt;&lt;b&gt;взаимодействия между компонентами&lt;/b&gt;,&lt;br&gt;не изменяя сами компоненты&quot;.&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="125" y="25" width="290" height="100" as="geometry" />
         </mxCell>
         <mxCell id="XmwOyZjwYUksLEpxh4fr-6" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px&quot;&gt;MEDIATOR&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
           <mxGeometry x="210" y="5" width="120" height="20" as="geometry" />
